@@ -1,0 +1,6 @@
+.DS_Store
+.build
+.vscode
+.env
+__generated__
+node_modules
