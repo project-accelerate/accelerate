@@ -1,0 +1,48 @@
+type Query {
+  eventFeed(postcode: String!, distanceInKM: Float, cursor: String): EventFeed!
+  event(id: ID!): Event
+}
+
+type Mutation {
+  createEvent(request: CreateEvent): CreateEventResponse
+}
+
+input CreateEvent {
+  title: String!
+  organiser: String!
+  startDate: String!
+  endDate: String!
+  description: String!
+  address: String!
+  postcode: String!
+  extraInformation: String!
+  suitabilityInformation: [String!]!
+}
+
+type CreateEventResponse {
+  event: Event
+}
+
+type EventFeed {
+  edges: [EventFeedItem!]!
+}
+
+type EventFeedItem {
+  node: Event!
+  distance: Float!
+  cursor: String!
+}
+
+type Event {
+  id: ID!
+  title: String!
+  organiser: String!
+  startDate: String!
+  endDate: String!
+  shortDescription: String!
+  longDescription: String!
+  address: String!
+  postcode: String!
+  extraInformation: String!
+  suitabilityInformation: [String!]!
+}
