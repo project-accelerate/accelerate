@@ -14,6 +14,7 @@ const SCHEMA_PATH = './modules/api/schema.graphql'
 
 /** Module definitions */
 defineModule('api')
+defineModule('api-interface')
 
 
 /** Compile frontend queries */
