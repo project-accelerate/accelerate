@@ -3,8 +3,10 @@
   "private": true,
   "dependencies": {
     "accelerate-api-interface": "../api-interface",
+    "classnames": "^2.2.5",
     "dotenv": "^4.0.0",
     "dotenv-webpack": "^1.5.4",
+    "lorem-ipsum": "^1.0.4",
     "next": "^4.2.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
@@ -20,7 +22,7 @@
     "@storybook/react": "^3.3.6"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s .",
     "build-storybook": "build-storybook"
   }
 }
