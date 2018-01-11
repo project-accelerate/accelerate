@@ -23,6 +23,7 @@
     "@storybook/react": "^3.3.6"
   },
   "scripts": {
+    "build": "next build",
     "storybook": "start-storybook -p 6006 -s .",
     "build-storybook": "build-storybook"
   }

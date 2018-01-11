@@ -29,7 +29,7 @@ gulp.task('frontend:graphql:watch', shell.task([
 
 /** Build frontend for production */
 gulp.task('frontend:build', [...moduleBuildTasks(), 'frontend:graphql:build'], shell.task([
-  'next build'
+  'npm run build'
 ], { cwd: 'modules/frontend' }))
 
 gulp.task('frontend:serve-dev', [...moduleBuildTasks(), 'frontend:graphql:build'], shell.task([
