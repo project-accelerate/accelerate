@@ -1,22 +1,22 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql, createFragmentContainer } from 'react-relay'
-import { connection } from '../../lib/types'
+import { connection, fragment } from '../../lib/types';
+import EventFeedItem from './EventFeedItem'
 
 export function EventFeedView({ events }) {
   return (
     <div>
-      {events.edges.map(e => <span>Node: {e.node.id}<br /></span>)}
+      {
+        events.edges.map(({ node }) => (
+          <EventFeedItem key={node.id} event={node} />
+        ))
+      }
     </div>
   )
 }
 
 EventFeedView.propTypes = {
-  events: connection(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired
-    })
-  ).isRequired
+  events: connection(fragment).isRequired
 }
 
 export default createFragmentContainer(EventFeedView, {
@@ -25,6 +25,7 @@ export default createFragmentContainer(EventFeedView, {
       edges {
         node {
           id
+          ...EventFeedItem_event
         }
       }
     }

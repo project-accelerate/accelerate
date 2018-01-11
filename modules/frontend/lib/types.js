@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { fromPairs } from 'lodash'
 
 export function connection(nodeType) {
   return PropTypes.shape({
@@ -11,6 +12,14 @@ export function connection(nodeType) {
 }
 
 export const fragment = PropTypes.object
+
+export function urlInfo(...params) {
+  return PropTypes.shape({
+    query: fromPairs(
+      params.map(param => [param, PropTypes.string.isRequired])
+    ).isRequired
+  })
+}
 
 connection.empty = {
   edges: []
