@@ -1,5 +1,5 @@
 import uuid from 'uuid'
-import { getId, getProperty, decodeCursor, encodeResultsPage } from '../utils'
+import { nodeID, getProperty, decodeCursor, encodeResultsPage } from '../utils'
 
 export const Query = {
   eventFeed: async (_, { postcode, distanceInKM, cursor }, { connectors }) => {
@@ -55,11 +55,11 @@ export const Mutation = {
 }
 
 export const Event = {
-  id: getId(),
+  id: nodeID(),
   title: getProperty({ connector: 'EventConnector' }),
-  organiser: getProperty({ connector: 'EventConnector', transform: toISOString }),
+  organiser: getProperty({ connector: 'EventConnector' }),
   startDate: getProperty({ connector: 'EventConnector', transform: toISOString }),
-  endDate: getProperty({ connector: 'EventConnector' }),
+  endDate: getProperty({ connector: 'EventConnector', transform: toISOString }),
   shortDescription: getProperty({ connector: 'EventConnector', fromKey: 'description', transform: trimLength(255) }),
   longDescription: getProperty({ connector: 'EventConnector', fromKey: 'description' }),
   address: getProperty({ connector: 'EventConnector' }),
