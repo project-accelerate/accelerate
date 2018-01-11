@@ -1,21 +1,11 @@
 require('dotenv').config()
+require('babel-polyfill')
 
-const { parse } = require('url')
-const next = require('next')
 const express = require('express')
-const createBackend = require('./modules/api').default
+const { createBackend } = require('./modules/api')
+const { frontend, render } = require('./modules/frontend')
 
 const { PORT = 3000 } = process.env
-const dev = process.env.NODE_ENV !== 'production'
-const frontend = next({
-  dev,
-  dir: 'modules/frontend'
-})
-
-const render = (req, res) => {
-  const { pathname, query } = parse(req.url)
-  return frontend.render(req, res, pathname, query)
-}
 
 frontend.prepare().then(() => {
   const server = express()
