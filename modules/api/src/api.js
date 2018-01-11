@@ -8,6 +8,7 @@ import * as path from 'path'
 import * as EventResolvers from './resolvers/EventResolver'
 import EventConnector from './connectors/EventConnector'
 import PostcodeConnector from './connectors/PostcodeConnector'
+import { getNode } from './utils';
 
 const typeDefs = fs.readFileSync(path.join(__dirname, '..', 'schema.graphql'), 'utf8')
 
@@ -33,7 +34,7 @@ export function createContext() {
   }
 }
 
-export default function createBackend() {
+export function createBackend() {
   const app = express()
 
   if (process.env.NODE_ENV !== 'production') {
@@ -49,7 +50,11 @@ export default function createBackend() {
 }
 
 function mergeTypeResolvers(modules) {
-  const resolverMap = {}
+  const resolverMap = {
+    Query: {
+      node: getNode()
+    }
+  }
 
   forEach(modules, (resolverModule) => {
     forEach(resolverModule, (resolvers, typeName) => {

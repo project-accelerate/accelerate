@@ -35,7 +35,7 @@ export function getProperty({ connector, transform = identity, fromKey }) {
   }
 }
 
-export function getId() {
+export function nodeID() {
   return (id) => id
 }
 

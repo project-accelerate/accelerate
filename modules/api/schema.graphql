@@ -1,6 +1,10 @@
+interface Node {
+  id: ID!
+}
+
 type Query {
   eventFeed(postcode: String!, distanceInKM: Float, cursor: String): EventFeed!
-  event(id: ID!): Event
+  node(id: ID!): Node
 }
 
 type Mutation {
@@ -33,7 +37,7 @@ type EventFeedItem {
   cursor: String!
 }
 
-type Event {
+type Event implements Node {
   id: ID!
   title: String!
   organiser: String!
