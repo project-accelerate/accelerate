@@ -36,8 +36,11 @@ export function LinkButton({ children, href, prefetch, ...props }) {
 
 LinkButton.propTypes = {
   children: PropTypes.node,
-  prefetch: PropTypes.boolean,
-  href: PropTypes.string
+  prefetch: PropTypes.bool,
+  href: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+    query: PropTypes.objectOf(PropTypes.string),
+  })
 }
 
 LinkButton.defaultProps = {
