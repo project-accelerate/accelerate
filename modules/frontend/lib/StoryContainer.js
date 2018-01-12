@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Theme from '../components/Theme'
 
 export function StoryContaner({ children }) {
@@ -8,4 +9,8 @@ export function StoryContaner({ children }) {
       {children}
     </div>
   )
+}
+
+StoryContaner.propTypes = {
+  children: PropTypes.node.isRequired
 }
