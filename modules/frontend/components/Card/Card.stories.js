@@ -4,11 +4,10 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import ipsum from 'lorem-ipsum'
 import { Card, CardTitle, CardContent, CardFooter, CardFooterItem } from './Card'
-import { StoryContaner } from '../../lib/StoryContainer'
 
 storiesOf('Components/Card', module)
   .add('list', () => (
-    <StoryContaner>
+    <div>
       <Card>
         <CardTitle>Card 1</CardTitle>
         <CardContent>
@@ -39,5 +38,5 @@ storiesOf('Components/Card', module)
           <CardFooterItem>Delete</CardFooterItem>
         </CardFooter>
       </Card>
-    </StoryContaner>
+    </div>
   ))
