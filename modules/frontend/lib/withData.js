@@ -2,7 +2,6 @@ import React from 'react'
 import { fetchQuery } from 'react-relay'
 import PropTypes from 'prop-types'
 import RelayContextProvider from 'relay-context-provider'
-import QueryLookupRenderer from 'relay-query-lookup-renderer';
 import createEnvironment from 'accelerate-api-interface'
 
 export default ({ query }) => (
