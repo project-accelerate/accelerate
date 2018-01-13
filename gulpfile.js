@@ -19,12 +19,14 @@ defineModule('api-interface')
 
 /** Compile frontend queries */
 gulp.task('frontend:graphql:build', shell.task([
-  `relay-compiler --src ./modules/frontend --exclude **/.next/** **/node_modules/** **/test/**  **/__generated__/** --schema ${SCHEMA_PATH}`
+  // Need to explicitly include directories containing graphql due to bug in relay-compiler
+  // https://github.com/facebook/relay/issues/2042
+  `relay-compiler --src ./modules/frontend --include pages --include components/** --exclude **/__generated__/** --schema ${SCHEMA_PATH} --watchman false`
 ]))
 
 /** Compile frontend queries when frontend source changes */
 gulp.task('frontend:graphql:watch', shell.task([
-  `relay-compiler --watch --src ./modules/frontend --exclude **/.next/** **/node_modules/** **/test/**  **/__generated__/** --schema ${SCHEMA_PATH}`
+  `relay-compiler --watch --src ./modules/frontend  --include ./modules/frontend/pages --include ./modules/frontend/components --exclude  **/__generated__/** --schema ${SCHEMA_PATH}`
 ]))
 
 /** Build frontend for production */
