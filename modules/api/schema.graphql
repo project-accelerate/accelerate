@@ -3,7 +3,7 @@ interface Node {
 }
 
 type Query {
-  eventFeed(postcode: String!, distanceInKM: Float, cursor: String): EventFeed!
+  eventFeed(postcode: String!, distanceInKM: Float!, cursor: String): EventFeed!
   node(id: ID!): Node
 }
 

@@ -8,6 +8,8 @@ export function EventFeedItemView({ event }) {
   return (
     <Card>
       <CardTitle>{event.title}</CardTitle>
+      <CardContent>{event.organiser}</CardContent>
+      <CardContent>{event.postcode}</CardContent>
       <CardContent>{event.shortDescription}</CardContent>
       <CardFooter>
         <CardFooterItem>
