@@ -4,16 +4,17 @@ import withData from '../lib/withData'
 import { fragment } from '../lib/types'
 import EventFeed from '../components/EventFeed/EventFeed'
 import Hero from '../components/Hero/Hero'
+import PageWrapper from '../components/Page';
 
 export function HomePage({ eventFeed }) {
   return (
-    <div>
+    <PageWrapper>
       <Hero
         header="Get Involved!"
         subheader="Find and join with people organising near you"
       />
       <EventFeed events={eventFeed} />
-    </div>
+    </PageWrapper>
   )
 }
 

@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { urlInfo } from '../lib/types';
+import PageWrapper from '../components/Page';
 
 export default function EventPage({ url }) {
-  return <div>{url.query.id}</div>
+  return <PageWrapper>{url.query.id}</PageWrapper>
 }
 
 EventPage.propTypes = {
