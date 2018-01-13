@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Head from 'next/head'
 
 export default function PageWrapper({ children }) {
   return (
     <div>
+      <Head>
+        <meta name="viewport" content="width=device-width" />
+      </Head>
+        
       <style jsx global>
         {`
           [data-reactroot] {
