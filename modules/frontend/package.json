@@ -14,6 +14,8 @@
     "react-dom": "^16.2.0",
     "react-no-ssr": "^1.1.0",
     "react-relay": "^1.4.1",
+    "relay-context-provider": "^1.0.4",
+    "relay-query-lookup-renderer": "^2.0.2",
     "relay-runtime": "^1.4.1"
   },
   "devDependencies": {

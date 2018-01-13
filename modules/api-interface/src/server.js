@@ -2,7 +2,7 @@ import { Environment, Store, RecordSource } from 'relay-runtime'
 import { Network } from 'relay-local-schema'
 import { createSchema, createContext } from 'accelerate-api'
 
-export default function initEnvironment() {
+export default function initEnvironment({ records = {} } = {}) {
   const network = Network.create({
     schema: createSchema(),
     contextValue: createContext()
@@ -10,6 +10,6 @@ export default function initEnvironment() {
 
   return new Environment({
     network,
-    store: new Store(new RecordSource())
+    store: new Store(new RecordSource(records))
   })
 }

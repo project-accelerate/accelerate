@@ -13,6 +13,7 @@ export function HomePage({ eventFeed }) {
         header="Get Involved!"
         subheader="Find and join with people organising near you"
       />
+
       <EventFeed events={eventFeed} />
     </PageWrapper>
   )
@@ -22,7 +23,7 @@ HomePage.propTypes = {
   eventFeed: fragment.isRequired
 }
 
-export default withData(HomePage, {
+export default withData({
   query: graphql`
     query pages_homePageQuery {
       eventFeed(postcode: "BN2 9XE") {
@@ -30,4 +31,4 @@ export default withData(HomePage, {
       }
     }
   `
-})
+})(HomePage)
