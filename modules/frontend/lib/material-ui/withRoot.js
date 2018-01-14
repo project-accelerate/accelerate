@@ -39,6 +39,10 @@ function withRoot(Component) {
     pageContext: PropTypes.object,
   };
 
+  WithRoot.defaultProps = {
+    pageContext: undefined,
+  };
+
   WithRoot.getInitialProps = ctx => {
     if (Component.getInitialProps) {
       return Component.getInitialProps(ctx);

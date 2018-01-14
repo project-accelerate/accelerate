@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { urlInfo } from '../lib/types';
+import PropTypes from 'prop-types'
 import PageWrapper from '../components/Page';
 
 export default function EventPage({ url }) {
@@ -7,5 +7,5 @@ export default function EventPage({ url }) {
 }
 
 EventPage.propTypes = {
-  url: urlInfo('id').isRequired
+  url: PropTypes.object.isRequired
 }

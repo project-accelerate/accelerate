@@ -30,8 +30,7 @@ export function FeedPage({ eventFeed }) {
 }
 
 FeedPage.propTypes = {
-  eventFeed: PropTypes.object,
-  url: PropTypes.object,
+  eventFeed: PropTypes.object.isRequired
 }
 
 export default withData({
