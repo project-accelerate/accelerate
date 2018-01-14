@@ -12,7 +12,8 @@
     "heroku-postbuild": "gulp build",
     "db:migrate": "knex-migrate up",
     "db:seed": "knex seed:run",
-    "db:revert": "knex-migrate up"
+    "db:revert": "knex-migrate up",
+    "precommit": "lint-staged && npm test"
   },
   "devDependencies": {
     "eslint": "^4.14.0",
@@ -54,7 +55,7 @@
     "uuid": "^3.1.0"
   },
   "lint-staged": {
-    "*.js": [
+    "**/*.js": [
       "npm run pretty",
       "git add"
     ]
