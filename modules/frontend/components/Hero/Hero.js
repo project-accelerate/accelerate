@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles"
+import { withStyles } from "material-ui/styles";
 
 const styles = {
   root: {
@@ -9,7 +9,7 @@ const styles = {
     height: "66vh",
 
     color: "white",
-    textAlign: "center",
+    textAlign: "center"
   },
   bg: {
     filter: "blur(3px)",
@@ -20,12 +20,12 @@ const styles = {
     backgroundPositiondefault: "bottom center",
     backgroundSize: "cover",
     width: "100%",
-    height: "100%",
+    height: "100%"
   },
   spacer: {
     display: "block",
 
-    width: "100%",
+    width: "100%"
   },
   content: {
     display: "flex",
@@ -35,7 +35,7 @@ const styles = {
 
     backgroundColor: "rgba(200, 50, 50, 0.1)",
     width: "100%",
-    height: "100%",
+    height: "100%"
   },
   h1: {
     margin: "0",
@@ -44,19 +44,19 @@ const styles = {
     fontSize: "2.5rem",
     textTransform: "uppercase",
 
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)"
   },
   h2: {
     margin: "0",
 
     fontWeight: "400",
 
-    textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)",
+    textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)"
   },
   controls: {
-    marginTop: "2rem",
+    marginTop: "2rem"
   }
-}
+};
 
 function Hero({ header, subheader, controls, classes }) {
   return (
@@ -72,7 +72,7 @@ function Hero({ header, subheader, controls, classes }) {
   );
 }
 
-export default withStyles(styles)(Hero)
+export default withStyles(styles)(Hero);
 
 Hero.propTypes = {
   classes: PropTypes.object.isRequired,
