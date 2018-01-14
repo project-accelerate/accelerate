@@ -1,21 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 import { graphql, createFragmentContainer } from 'react-relay'
-import { Card, CardTitle, CardContent, CardFooter, CardFooterItem } from '../Card/Card';
-import { LinkButton } from '../Button/Button';
+import Card, { CardActions, CardContent } from 'material-ui/Card';
+import Button from 'material-ui/Button';
+import Typography from 'material-ui/Typography';
+
 
 export function EventFeedItemView({ event }) {
   return (
-    <Card>
-      <CardTitle>{event.title}</CardTitle>
-      <CardContent>{event.organiser}</CardContent>
-      <CardContent>{event.postcode}</CardContent>
-      <CardContent>{event.shortDescription}</CardContent>
-      <CardFooter>
-        <CardFooterItem>
-          <LinkButton href={{ pathname: '/event', query: { id: event.id }}}>See More</LinkButton>
-        </CardFooterItem>
-      </CardFooter>
+    <Card style={{ marginBottom: '1rem' }}>
+      <CardContent>
+        <Typography type="title" component="h3" style={{ marginBottom: '1rem' }}>
+          {event.title}
+        </Typography>
+        <Typography type="subheading" component="p" style={{ marginBottom: '1rem' }}>{
+          event.organiser}
+        </Typography>
+        <Typography component="p">
+          {event.shortDescription}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Link href={{ pathname: '/event', query: { id: event.id }}}>
+          <Button dense>See More</Button>
+        </Link> 
+      </CardActions>
     </Card>
   )
 }

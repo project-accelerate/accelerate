@@ -1,14 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Head from 'next/head'
+import withRoot from '../lib/material-ui/withRoot';
 
-export default function PageWrapper({ children }) {
+function PageWrapper({ children }) {
   return (
     <div>
-      <Head>
-        <meta name="viewport" content="width=device-width" />
-      </Head>
-        
       <style jsx global>
         {`
           [data-reactroot] {
@@ -17,6 +13,7 @@ export default function PageWrapper({ children }) {
 
           body {
             margin: 0;
+            background-color: #303030;
           }
         `}
       </style>
@@ -29,6 +26,8 @@ export default function PageWrapper({ children }) {
 PageWrapper.propTypes = {
   children: PropTypes.node.isRequired
 }
+
+export default withRoot(PageWrapper)
 
 export function Theme() {
   return (

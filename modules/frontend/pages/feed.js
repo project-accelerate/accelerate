@@ -1,40 +1,37 @@
 import React from 'react'
-import Router from 'next/router'
+import PropTypes from 'prop-types'
 import { graphql } from 'react-relay'
+import Typography from 'material-ui/Typography';
+import Button from 'material-ui/Button/Button';
+import Paper from 'material-ui/Paper/Paper';
 import withData from '../lib/withData'
-import { fragment, urlInfo } from '../lib/types';
 import EventFeed from '../components/EventFeed/EventFeed'
 import Hero from '../components/Hero/Hero'
 import PageWrapper from '../components/Page'
 
-export function FeedPage({ eventFeed, url }) {
-  const handlePostcodeChange = (event) => {
-    event.preventDefault()
-    Router.replace({
-      ...url,
-      query: { postcode: event.currentTarget.querySelector('input').value }
-    })
-  }
+export function FeedPage({ eventFeed }) {
   return (
     <PageWrapper>
       <Hero
-        header="Get Involved!"
-        subheader="Find and join with people organising near you"
+        header="Get Involved"
+        subheader="Meet people nearby who care about the same things as you"
         controls={
-          <form onSubmit={handlePostcodeChange}>
-            Showing events near: <input defaultValue={url.query.postcode} />
-          </form>
+          <Paper square elevation={5} style={{ whitespace: 'nowrap', paddingLeft: '1rem', opacity: '0.8' }}>
+            Showing meetups near <strong>BN2</strong> <Button>Change</Button>
+          </Paper>
         }
       />
-
+      <Typography type="headline" component="h3" style={{ margin: '1rem' }}>
+        Happening Soon
+      </Typography>
       <EventFeed events={eventFeed} />
     </PageWrapper>
   )
 }
 
 FeedPage.propTypes = {
-  eventFeed: fragment.isRequired,
-  url: urlInfo.isRequired
+  eventFeed: PropTypes.object,
+  url: PropTypes.object,
 }
 
 export default withData({

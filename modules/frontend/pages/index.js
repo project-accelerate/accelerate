@@ -1,33 +1,22 @@
 import React from 'react'
-import Router from 'next/router'
-import lorem from 'lorem-ipsum'
+import Button from 'material-ui/Button/Button';
+import Paper from 'material-ui/Paper/Paper';
 import Hero from '../components/Hero/Hero'
 import PageWrapper from '../components/Page';
-import { CardTitle, Card } from '../components/Card/Card';
 
 export default function HomePage() {
-  const handleEnter = (event) => {
-    event.preventDefault()
-    Router.push({
-      pathname: '/feed',
-      query: { postcode: event.currentTarget.querySelector('input').value }
-    })
-  }
-
   return (
     <PageWrapper>
       <Hero
+        fullscreen
         header="Get Involved!"
         subheader="Find and join with people organising near you"
+        controls={
+          <Paper square elevation={5} style={{ whitespace: 'nowrap', paddingLeft: '1rem', opacity: '0.8' }}>
+            Showing meetups near <strong>BN2</strong> <Button>Change</Button>
+          </Paper>
+        }
       />
-      <Card>
-        <CardTitle>Momentum can connect you with meetups, campaign groups and unions near you</CardTitle>
-        <p>{lorem({ count: 5 })}</p>
-        <h4>Enter your postcode to get started:</h4>
-        <form onSubmit={handleEnter}>
-          <input />
-        </form>
-      </Card>
     </PageWrapper>
   )
 }

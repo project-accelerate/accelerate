@@ -8,31 +8,50 @@ export default function Hero({ header, subheader, controls }) {
         {`
           .root {
             position: relative;
+            border-bottom: 2px solid red;
+            height: 66vh;
+          
+            color: white;
+            text-align: center;
+          }
+
+          .bg {
+            filter: blur(3px);
+            position: absolute;
+            z-index: -1;
+          
+            background-image: url('/static/get-involved.jpg');
+            background-position: bottom center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+          }
+
+          .spacer {
+            display: block;
+
+            width: 100%;
+          }
+
+          .content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-          
-            height: 66vh;
-            background-image: url('/static/get-involved.jpg');
-            background-position: bottom center;
-            background-size: cover;
-          
-            color: white;
-          }
 
-          .spacer {
-            flex: 1;
+            background-color: rgba(200,50,50,0.1);
+            width: 100%;
+            height: 100%;
           }
 
           h1 {
             margin: 0;
             margin-bottom: 0.5rem;
         
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
         
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
           }
           
           h2 {
@@ -45,15 +64,17 @@ export default function Hero({ header, subheader, controls }) {
 
           .controls {
             margin-top: 2rem;
-            flex: 1;
           }
         `}
       </style>
-      <span className="spacer" />
-      <h1>{header}</h1>
-      <h2>{subheader}</h2>
-      <div className="controls">
-        {controls}
+      <div className="bg" />
+      <div className="content">
+        <span className="spacer" />
+        <h1>{header}</h1>
+        <h2>{subheader}</h2>
+        <div className="controls">
+          {controls}
+        </div>
       </div>
     </section>
   )
