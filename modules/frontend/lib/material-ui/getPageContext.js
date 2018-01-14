@@ -1,14 +1,13 @@
 /* eslint-disable no-underscore-dangle */
 
-import { SheetsRegistry } from 'jss';
-import { createMuiTheme, createGenerateClassName } from 'material-ui/styles';
+import { SheetsRegistry } from "jss";
+import { createMuiTheme, createGenerateClassName } from "material-ui/styles";
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark'
-  },
+    type: "dark"
+  }
 });
-
 
 function createPageContext() {
   return {
@@ -18,7 +17,7 @@ function createPageContext() {
     // This is needed in order to inject the critical CSS.
     sheetsRegistry: new SheetsRegistry(),
     // The standard class name generator.
-    generateClassName: createGenerateClassName(),
+    generateClassName: createGenerateClassName()
   };
 }
 

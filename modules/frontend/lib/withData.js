@@ -1,47 +1,55 @@
-import React from 'react'
-import { fetchQuery } from 'react-relay'
-import PropTypes from 'prop-types'
-import RelayContextProvider from 'relay-context-provider'
-import createEnvironment from 'accelerate-api-interface'
+import React from "react";
+import { fetchQuery } from "react-relay";
+import PropTypes from "prop-types";
+import RelayContextProvider from "relay-context-provider";
+import createEnvironment from "accelerate-api-interface";
 
-export default ({ query }) => (
-  (ComposedComponent) => class extends React.Component {
-    static displayName = `WithData(${ComposedComponent.displayName || ComposedComponent.name})`
-    
+export default ({ query }) => ComposedComponent =>
+  class extends React.Component {
+    static displayName = `WithData(${ComposedComponent.displayName ||
+      ComposedComponent.name})`;
+
     static async getInitialProps(ctx) {
-      const inheritedProps = ComposedComponent.getInitialProps ? ComposedComponent.getInitialProps(ctx) : {}
-      const environment = createEnvironment()
+      const inheritedProps = ComposedComponent.getInitialProps
+        ? ComposedComponent.getInitialProps(ctx)
+        : {};
+      const environment = createEnvironment();
 
-      const variables = ctx.query
+      const variables = ctx.query;
 
-      const queryProps = await fetchQuery(environment, query, variables)
-      const queryRecords = environment.getStore().getSource().toJSON()
+      const queryProps = await fetchQuery(environment, query, variables);
+      const queryRecords = environment
+        .getStore()
+        .getSource()
+        .toJSON();
 
       return {
         ...inheritedProps,
         ...queryProps,
         queryRecords
-      }
+      };
     }
 
     static propTypes = {
       queryRecords: PropTypes.objectOf(PropTypes.any).isRequired
-    }
+    };
 
     get variables() {
-      return {}
+      return {};
     }
 
     environment = createEnvironment({
       records: this.props.queryRecords
-    })
+    });
 
-    render () {
+    render() {
       return (
-        <RelayContextProvider environment={this.environment} variables={this.variables}>
+        <RelayContextProvider
+          environment={this.environment}
+          variables={this.variables}
+        >
           <ComposedComponent {...this.props} />
         </RelayContextProvider>
-      )
+      );
     }
-  }
-)
+  };

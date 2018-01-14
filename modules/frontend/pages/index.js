@@ -1,8 +1,8 @@
-import React from 'react'
-import Button from 'material-ui/Button/Button';
-import Paper from 'material-ui/Paper/Paper';
-import Hero from '../components/Hero/Hero'
-import PageWrapper from '../components/Page';
+import React from "react";
+import Button from "material-ui/Button/Button";
+import Paper from "material-ui/Paper/Paper";
+import Hero from "../components/Hero/Hero";
+import PageWrapper from "../components/Page";
 
 export default function HomePage() {
   return (
@@ -12,11 +12,19 @@ export default function HomePage() {
         header="Get Involved!"
         subheader="Find and join with people organising near you"
         controls={
-          <Paper square elevation={5} style={{ whitespace: 'nowrap', paddingLeft: '1rem', opacity: '0.8' }}>
+          <Paper
+            square
+            elevation={5}
+            style={{
+              whitespace: "nowrap",
+              paddingLeft: "1rem",
+              opacity: "0.8"
+            }}
+          >
             Showing meetups near <strong>BN2</strong> <Button>Change</Button>
           </Paper>
         }
       />
     </PageWrapper>
-  )
+  );
 }

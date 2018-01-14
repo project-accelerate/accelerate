@@ -1,12 +1,12 @@
-require('dotenv').config()
+require("dotenv").config();
 
 module.exports = {
-  client: 'pg',
+  client: "pg",
   connection: process.env.DATABASE_URL,
   seeds: {
-    directory: 'db/seeds'
+    directory: "db/seeds"
   },
   migrations: {
-    directory: 'db/migrations'
+    directory: "db/migrations"
   }
 };

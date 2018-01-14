@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import withRoot from '../lib/material-ui/withRoot';
+import React from "react";
+import PropTypes from "prop-types";
+import withRoot from "../lib/material-ui/withRoot";
 
 function PageWrapper({ children }) {
   return (
@@ -20,24 +20,26 @@ function PageWrapper({ children }) {
       <Theme />
       {children}
     </div>
-  )
+  );
 }
 
 PageWrapper.propTypes = {
   children: PropTypes.node.isRequired
-}
+};
 
-export default withRoot(PageWrapper)
+export default withRoot(PageWrapper);
 
 export function Theme() {
   return (
     <style jsx global>
       {`
         body {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol";
           font-size: 14px;
         }
       `}
     </style>
-  )
+  );
 }

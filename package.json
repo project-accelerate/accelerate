@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "pretty": "eslint --fix .",
+    "pretty": "prettier --ignore-path .gitignore --write --tab-width 2 \"**/*.js\"",
     "postinstall": "gulp setup",
     "heroku-postbuild": "gulp build",
     "db:migrate": "knex-migrate up",
