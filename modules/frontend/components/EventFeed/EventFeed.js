@@ -1,6 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql, createFragmentContainer } from 'react-relay'
-import { connection, fragment } from '../../lib/types';
 import EventFeedItem from './EventFeedItem'
 
 export function EventFeedView({ events }) {
@@ -16,7 +16,7 @@ export function EventFeedView({ events }) {
 }
 
 EventFeedView.propTypes = {
-  events: connection(fragment).isRequired
+  events: PropTypes.object.isRequired
 }
 
 export default createFragmentContainer(EventFeedView, {
