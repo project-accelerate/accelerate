@@ -1,6 +1,6 @@
 import * as React from "react";
 import { configure, addDecorator } from "@storybook/react";
-import { Theme } from "../components/Page";
+import Page from "../components/Page";
 
 function loadStories() {
   const storyContext = require.context("../components", true, /\.stories\.js$/);
@@ -9,8 +9,7 @@ function loadStories() {
 
 addDecorator(storyFn => (
   <div>
-    <Theme />
-    {storyFn()}
+    <Page>{storyFn()}</Page>
   </div>
 ));
 
