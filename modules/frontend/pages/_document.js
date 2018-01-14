@@ -25,10 +25,6 @@ class MyDocument extends Document {
             name="theme-color"
             content={pageContext.theme.palette.primary[500]}
           />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-          />
         </Head>
         <body>
           <Main />
