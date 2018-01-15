@@ -9,7 +9,7 @@ import Paper from "material-ui/Paper/Paper";
 import withData from "../lib/withData";
 import EventFeed from "../components/EventFeed/EventFeed";
 import EventSearchForm from "../components/EventSearchForm/EventSearchForm";
-import Hero, { HeroContainer } from "../components/Hero/Hero";
+import Hero from "../components/Hero/Hero";
 import PageWrapper from "../components/Page";
 import { withInitialProps } from "../lib/withInitialProps";
 import { lookupPostcode } from "../lib/lookupPostcode";
@@ -39,27 +39,25 @@ export function FeedPage({
           });
         }}
       />
-      <HeroContainer>
-        <Hero
-          key="front"
-          header="Get Involved"
-          subheader="Meet people nearby who care about the same things as you"
-          controls={
-            <Paper
-              square
-              elevation={5}
-              style={{
-                whitespace: "nowrap",
-                paddingLeft: "1rem",
-                opacity: "0.8"
-              }}
-            >
-              Showing meetups near <strong>{postcode}</strong>{" "}
-              <Button onClick={showSearch}>Change</Button>
-            </Paper>
-          }
-        />
-      </HeroContainer>
+      <Hero
+        key="front"
+        header="Get Involved"
+        subheader="Meet people nearby who care about the same things as you"
+        controls={
+          <Paper
+            square
+            elevation={5}
+            style={{
+              whitespace: "nowrap",
+              paddingLeft: "1rem",
+              opacity: "0.8"
+            }}
+          >
+            Showing meetups near <strong>{postcode}</strong>{" "}
+            <Button onClick={showSearch}>Change</Button>
+          </Paper>
+        }
+      />
       <Typography type="headline" component="h3" style={{ margin: "1rem" }}>
         Happening Soon
       </Typography>

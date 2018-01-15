@@ -2,19 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "material-ui/styles";
 
-const styles = {
+const styles = theme => ({
   root: {
     position: "relative",
     borderBottom: "2px solid red",
     height: "66vh",
 
     color: "white",
+    backgroundColor: theme.palette.background.default,
     textAlign: "center"
   },
   bg: {
     filter: "blur(3px)",
     position: "absolute",
-    zIndex: "-1",
 
     backgroundImage: "url('/static/get-involved.jpg')",
     backgroundPositiondefault: "bottom center",
@@ -28,6 +28,7 @@ const styles = {
     width: "100%"
   },
   content: {
+    position: "absolute",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -35,7 +36,8 @@ const styles = {
 
     backgroundColor: "rgba(200, 50, 50, 0.1)",
     width: "100%",
-    height: "100%"
+    height: "100%",
+    zIndex: "1"
   },
   h1: {
     margin: "0",
@@ -56,7 +58,7 @@ const styles = {
   controls: {
     marginTop: "2rem"
   }
-};
+});
 
 function Hero({ header, subheader, controls, classes }) {
   return (
