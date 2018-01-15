@@ -1,18 +1,26 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import TextField from "material-ui/TextField";
 import { compose } from "recompose";
+import Grid from "material-ui/Grid";
+import TextField from "material-ui/TextField";
 import withStyles from "material-ui/styles/withStyles";
 import Typography from "material-ui/Typography/Typography";
 import Button from "material-ui/Button/Button";
 
-const style = {
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
+const styles = theme => ({
+  grid: {
+    height: "100%",
+    borderBottom: "2px solid red",
+    padding: theme.spacing.unit * 2
+  },
+  field: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit
+  },
+  postcode: {
+    width: "6rem"
   }
-};
+});
 
 class EventSearchForm extends Component {
   static propTypes = {
@@ -25,28 +33,23 @@ class EventSearchForm extends Component {
     value: {}
   };
 
-  handleChange = key => value => {
+  setValue(key, value) {
     this.props.onChange({
       ...this.props.value,
       [key]: value
     });
+  }
+
+  handleChange = key => event => {
+    this.setValue(key, event.target.value);
   };
 
   handleUseGeo = () => {
     navigator.geolocation.getCurrentPosition(
       async ({ coords: { longitude, latitude } }) => {
-        const result = await fetch(
-          `http://api.postcodes.io/postcodes?lon=${longitude}&lat=${latitude}`
-        );
-        if (!result.ok) {
-          return;
-        }
-
-        const { result: [hit] } = await result.json();
-
-        if (hit) {
-          const changePostcode = this.handleChange("postcode");
-          changePostcode(`hit.postcode`);
+        const postcode = await (longitude, latitude);
+        if (postcode) {
+          this.setValue({ postcode });
         }
       }
     );
@@ -56,25 +59,33 @@ class EventSearchForm extends Component {
     const { classes, value } = this.props;
 
     return (
-      <form className={classes.form} noValidate autoComplete="off">
-        <Typography type="body1" component="p">
-          Enter the first part of your postcode to find meetups, events and
-          unions happening near you.
-        </Typography>
+      <Grid container alignItems="center" justify="center">
+        <Grid item>
+          <Typography classNames={classes.row} type="display1" component="h1">
+            Enter your location.
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography classNames={classes.row} type="body2" component="p">
+            Enter the first part of your postcode to find meetups, events and
+            organisations near you.
+          </Typography>
+        </Grid>
 
-        <TextField
-          id="postcode"
-          label="Name"
-          className={classes.textField}
-          value={value.name}
-          onChange={this.handleChange("name")}
-          margin="normal"
-        />
+        <Grid item>
+          <TextField
+            id="postcode"
+            className={classes.postcode}
+            value={value.postcode}
+            onChange={this.handleChange("name")}
+            margin="normal"
+          />
 
-        <Button onClick={this.handleUseGeo}>Use current location</Button>
-      </form>
+          <Button onClick={this.handleUseGeo}>Use current location</Button>
+        </Grid>
+      </Grid>
     );
   }
 }
 
-export default compose(withStyles(style))(EventSearchForm);
+export default compose(withStyles(styles))(EventSearchForm);

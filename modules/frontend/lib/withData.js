@@ -11,11 +11,14 @@ export default ({ query }) => ComposedComponent =>
 
     static async getInitialProps(ctx) {
       const inheritedProps = ComposedComponent.getInitialProps
-        ? ComposedComponent.getInitialProps(ctx)
+        ? await ComposedComponent.getInitialProps(ctx)
         : {};
       const environment = createEnvironment();
 
-      const variables = ctx.query;
+      const variables = {
+        ...ctx.query,
+        ...inheritedProps
+      };
 
       const queryProps = await fetchQuery(environment, query, variables);
       const queryRecords = environment
