@@ -3,6 +3,7 @@ import Router from "next/router";
 import PropTypes from "prop-types";
 import { compose, withStateHandlers } from "recompose";
 import { graphql } from "react-relay";
+import Postcode from "postcode";
 import Typography from "material-ui/Typography";
 import Button from "material-ui/Button/Button";
 import Paper from "material-ui/Paper/Paper";
@@ -53,7 +54,8 @@ export function FeedPage({
               opacity: "0.8"
             }}
           >
-            Showing meetups near <strong>{postcode}</strong>{" "}
+            Showing meetups near{" "}
+            <strong>{new Postcode(postcode).district()}</strong>{" "}
             <Button onClick={showSearch}>Change</Button>
           </Paper>
         }
