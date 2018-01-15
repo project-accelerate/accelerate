@@ -18,11 +18,12 @@ Prerequisites
 ---
 * [Node.js](https://nodejs.org/)
 * [Watchman](https://facebook.github.io/watchman/docs/install.html)
+* [Gulp](https://gulpjs.com/) (`npm install -g gulp-cli`)
 
 Installation
 ---
 ````
-git clone git@github.com:project-accelerate/accelerate.git
+git clone https://github.com/project-accelerate/accelerate.git
 cd accelerate
 npm install
 ````
@@ -34,20 +35,19 @@ Development workflow
 
 ````
 ## Starts a local development server
-npm run dev
+gulp
 
-## Run linters against source
-npm run lint
+## Run linters against source and fix an auto-fixable errors
+npm run lint:fix
 
-## Run code formatter and auto-fix lint errors (where possible)
-npm run tidy
-
-## Run unit tests
-npm run test
-
-## Run API and selenium acceptance tests
-npm run integration-test
+## Run linters against source and fix an auto-fixable errors
+npm run pretty
 ````
+
+As part of the install, this repository adds githooks to automatically
+run the lint & code-formatting scripts on commit.
+
+If you aren't able to commit, try running the linter and fixing the errors.
 
 Running against a local database
 ---
