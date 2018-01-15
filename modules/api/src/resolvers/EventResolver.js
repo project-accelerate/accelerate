@@ -1,7 +1,15 @@
 import uuid from "uuid";
-import { nodeID, getProperty, decodeCursor, encodeResultsPage } from "../utils";
+import {
+  nodeID,
+  getProperty,
+  decodeCursor,
+  encodeResultsPage,
+  getNode
+} from "../utils";
 
 export const Query = {
+  event: getNode(),
+
   eventFeed: async (_, { postcode, distanceInKM, cursor }, { connectors }) => {
     const limit = 10;
     const { EventConnector, PostcodeConnector } = connectors;
