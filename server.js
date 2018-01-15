@@ -13,11 +13,15 @@ frontend.prepare().then(() => {
   server.enable("trust proxy");
 
   server.use((req, res, next) => {
-    const geo = geoip.lookup(req.ip);
+    try {
+      const geo = geoip.lookup(req.ip);
 
-    if (geo && geo.ll) {
-      const [latitude, longitude] = geo.ll;
-      req.geolocation = { latitude, longitude };
+      if (geo && geo.ll) {
+        const [latitude, longitude] = geo.ll;
+        req.geolocation = { latitude, longitude };
+      }
+    } catch (err) {
+      process.stdderr.write(`Error resolving IP: ${err.message}\n`);
     }
 
     next();
