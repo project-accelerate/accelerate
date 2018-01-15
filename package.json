@@ -12,7 +12,7 @@
     "heroku-postbuild": "gulp build",
     "db:migrate": "knex-migrate up",
     "db:seed": "knex seed:run",
-    "db:revert": "knex-migrate up",
+    "db:revert": "knex-migrate down --to 0",
     "precommit": "lint-staged && npm test"
   },
   "devDependencies": {
