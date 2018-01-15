@@ -8,8 +8,8 @@ export async function lookupPostcode({ longitude, latitude }) {
     return null;
   }
 
-  const { result: [hit] } = await result.json();
-  return hit && hit.postcode;
+  const { result: hits } = await result.json();
+  return hits && Array.isArray(hits) && hits[0].postcode;
 }
 
 export async function lookupPostcodeFromUserLocation() {
