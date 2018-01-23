@@ -15,7 +15,7 @@ import PageWrapper from "../components/Page";
 import { withInitialProps } from "../lib/withInitialProps";
 import { lookupPostcode } from "../lib/lookupPostcode";
 
-export function FeedPage({
+function FeedPage({
   eventFeed,
   postcode,
   showSearch,
