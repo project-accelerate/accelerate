@@ -7,6 +7,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "test": "gulp test && true",
     "pretty": "prettier --ignore-path .gitignore --write --tab-width 2 \"**/*.js\"",
     "postinstall": "gulp setup",
     "heroku-postbuild": "gulp build",
