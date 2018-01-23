@@ -85,6 +85,21 @@ gulp.task("build", [...moduleBuildTasks(), "frontend:build"]);
 
 gulp.task("default", ["frontend:watch"]);
 
+/** Run frontend tests */
+gulp.task(
+  "frontend:test",
+  shell.task(["npm test"], { cwd: "modules/frontend" })
+);
+
+/** Run frontend tests and update snapshots */
+gulp.task(
+  "frontend:test:update",
+  shell.task(["npm test -- --updateSnapshot"], { cwd: "modules/frontend" })
+);
+
+/** Run all tests */
+gulp.task("test", ["frontend:test"]);
+
 /** Define build tasks for a module and add them to the list of module build tasks */
 function defineModule(name) {
   const sourceFiles = `modules/${name}/src/**/*.js`;
