@@ -29,11 +29,16 @@
     "@babel/preset-env": "^7.0.0-beta.37",
     "@storybook/addon-actions": "^3.3.6",
     "@storybook/addon-links": "^3.3.6",
-    "@storybook/react": "^3.3.6"
+    "@storybook/react": "^3.3.6",
+    "faker": "^4.1.0",
+    "jest": "^22.1.4",
+    "react-test-renderer": "^16.2.0",
+    "relay-mock-network-layer": "^1.2.0"
   },
   "scripts": {
     "build": "next build",
     "storybook": "start-storybook -p 6006 -s .",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest"
   }
 }
