@@ -42,6 +42,9 @@
     "test": "jest"
   },
   "jest": {
-    "setupFiles": ["./testSetup.js"]
+    "setupFiles": [
+      "./testSetup.js"
+    ],
+    "collectCoverage": true
   }
 }

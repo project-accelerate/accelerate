@@ -1,0 +1,1088 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/feed should display with events in feed 1`] = `
+<div>
+  <section
+    className="Hero-root-10"
+  >
+    <div
+      className="Hero-bg-11"
+    />
+    <div
+      className="Hero-content-13"
+    >
+      <span
+        className="Hero-spacer-12"
+      />
+      <h1
+        className="Hero-h1-14"
+      >
+        Get Involved
+      </h1>
+      <h2
+        className="Hero-h2-15"
+      >
+        Meet people nearby who care about the same things as you
+      </h2>
+      <div
+        className="Hero-controls-16"
+      >
+        <div
+          className="MuiPaper-root-17 MuiPaper-shadow5-24"
+          style={
+            Object {
+              "opacity": "0.8",
+              "paddingLeft": "1rem",
+              "whitespace": "nowrap",
+            }
+          }
+        >
+          Showing meetups near
+           
+          <strong>
+            TK7
+          </strong>
+           
+          <button
+            className="MuiButtonBase-root-58 MuiButton-root-44"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role={undefined}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label-46"
+            >
+              Change
+            </span>
+            <span
+              className="MuiTouchRipple-root-60"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <h3
+    className="MuiTypography-root-67 MuiTypography-headline-72"
+    style={
+      Object {
+        "margin": "1rem",
+      }
+    }
+  >
+    Happening Soon
+  </h3>
+  <div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          harum sit odio
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          quos est quod
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          05754 Stanton Point
+          , 
+          NA65
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Quisquam esse quia expedita commodi. Tempora ut exercitationem doloribus harum. Sunt omnis et accusantium et quia quos sequi molestiae. Enim necessitatibus molestiae. Saepe eligendi rerum excepturi et laudantium fuga similique fugit.
+ 
+Dolores esse nobis et sint. Aut atque dolores maiores incidunt. Iusto laborum facere quia deleniti dolorem quibusdam. Veniam perspiciatis et nisi aut corporis laboriosam.
+ 
+Soluta accusamus officiis ut excepturi blanditiis libero ut. Quo fuga enim tempore non voluptas quia. Ipsam voluptas necessitatibus. Dolor adipisci dolores sunt.
+ 
+Occaecati rerum nesciunt. Sint est asperiores sit voluptatum mollitia enim iste. Nesciunt minima sequi voluptas optio aut voluptatem.
+ 
+Voluptates iste eius iure commodi molestiae at voluptas. Ex reprehenderit ipsa incidunt corporis vel in unde. Iste asperiores consequatur ex quidem omnis inventore deserunt. Eligendi officiis voluptatem. In omnis labore consequatur nisi.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          doloribus expedita et
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          exercitationem voluptatibus error
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          2524 Turcotte Mount
+          , 
+          VT15
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Error sint aut aliquid qui harum minus officiis. Dolorem animi maiores et. Voluptatibus dolorem beatae et molestiae. Sed rerum qui.
+ 
+Velit explicabo accusantium exercitationem illum molestiae et. Illo blanditiis et facere rem quod molestias. Esse impedit aliquam. Vel dolorem consequatur dolor consequatur quis nobis nemo asperiores. Ea aut consectetur nam corrupti necessitatibus quas optio. Odio sit odio quae voluptas id.
+ 
+Dicta aut qui qui vel. Suscipit ipsum molestiae inventore placeat nesciunt. Laboriosam facere odio beatae nobis vero quia. Et voluptates molestiae magni beatae vitae atque eos optio. Vitae nihil accusamus natus et quia.
+ 
+Dolores vel quis totam. Consequatur voluptas consequatur expedita omnis laudantium recusandae error culpa nihil. Quis porro voluptatem vel. Libero fugiat doloremque deserunt quidem totam aperiam tempore.
+ 
+Rem cumque quia delectus perspiciatis sunt. Inventore et officia. Facere assumenda excepturi sunt et aut corporis cumque quos distinctio. Ab quia autem consectetur occaecati nemo molestiae nisi temporibus soluta. Illo deleniti aut sit id quia.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          voluptatibus vel ut
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          iusto autem beatae
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          6501 Yadira Meadow
+          , 
+          ZA49
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Laudantium occaecati sapiente deleniti. Ipsam quibusdam aspernatur quibusdam mollitia. Dolore dignissimos id porro.
+ 
+Eveniet consectetur culpa delectus quo et. Et rerum accusantium repudiandae ut ab quas vel. Error asperiores dolores. In autem quia numquam.
+ 
+In incidunt et. In harum maxime veniam in. Voluptas consequatur voluptatibus consequatur dolorem. Voluptatum neque unde mollitia iusto nostrum exercitationem. Reprehenderit accusantium quo necessitatibus et sit tenetur consequuntur. Omnis debitis quae autem quo ut.
+ 
+Officiis qui impedit aliquid a aut et cum officiis. Ex praesentium non quasi voluptatem repellat earum quidem. Et nulla ratione quia quo mollitia minima sit ut. Vitae consequatur similique dicta commodi tempora voluptatem officiis. Commodi ex ut porro similique et tempora delectus. Veniam distinctio dolore ullam beatae quam saepe.
+ 
+Recusandae quos officia. Hic necessitatibus iste. Et harum alias sit deleniti. Molestiae qui velit explicabo ab nihil voluptate aut quis ut.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          quam voluptas esse
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          et nihil quo
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          787 Williamson Road
+          , 
+          HD35
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Sed excepturi ullam maxime ratione suscipit sunt ut. Culpa commodi architecto error soluta consectetur quisquam. Omnis numquam quas minima vitae quod culpa natus.
+ 
+Officia perspiciatis quisquam eligendi dicta. Voluptatibus culpa quia incidunt aut maxime quas omnis dignissimos velit. Qui quam laudantium accusamus. Possimus labore dolores sit dolor tenetur omnis expedita error. Et est ea sed occaecati rem velit consequatur doloremque.
+ 
+Consequatur sed dicta. Ut molestiae rerum magni quos quis enim est. Quod non et quam impedit. Voluptatem nulla voluptatibus blanditiis. Minima sed recusandae atque.
+ 
+Voluptates et ipsa cupiditate impedit dolorem. Nihil dignissimos culpa eaque facere ipsa. Sit laudantium rerum temporibus et aut. Dolorem laborum assumenda quia totam.
+ 
+Commodi sit eos corporis molestias atque exercitationem molestiae hic ratione. Soluta quia aut aut et maiores sunt voluptate cum. Laborum voluptate et quaerat inventore vitae iure voluptatem.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          velit corrupti distinctio
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          nesciunt impedit voluptates
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          9020 Albertha Branch
+          , 
+          EO51
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Totam totam autem est perspiciatis qui. Deleniti et dolore ut ea est sed dolores assumenda. Sed laborum maiores labore. Nihil qui aliquid rerum minima. Repellat et ipsa a facilis omnis eaque. Omnis dolorum incidunt sit sunt.
+ 
+Illo minus repudiandae cum sed ab quia exercitationem. Qui a quis dolore consequatur laborum magni. Laborum illo doloribus molestias ut alias modi.
+ 
+Assumenda voluptatibus suscipit. Veniam sint iure esse similique maxime error non amet reprehenderit. At quod consequuntur.
+ 
+Vel dolores maiores molestiae est nemo dolor sint debitis sint. Aut velit vero corporis et voluptatibus corporis voluptas laboriosam. Mollitia cum odio est recusandae enim qui maxime voluptatum. Et natus ea labore. Possimus aspernatur dolorem eius odit quia et ratione ducimus veniam. Dolor omnis cupiditate ut aperiam eveniet voluptatibus et et at.
+ 
+Distinctio autem vel minima dolores est error perferendis qui doloremque. Illo dolore fugit cupiditate placeat sed saepe porro. Ea a quibusdam deleniti et et eaque sed unde est.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          ad quos molestias
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          et accusamus rerum
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          8382 Freida Turnpike
+          , 
+          UM73
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Assumenda vero suscipit at dolores a et optio. Aut aut minus blanditiis. Nulla porro voluptatem porro eaque ipsa eaque. Quod autem minus et nam laudantium non. Quo ea qui quia mollitia cupiditate.
+ 
+Impedit nam et unde atque accusantium. Doloremque omnis cumque alias impedit aut. Unde debitis deleniti totam consequuntur fuga itaque blanditiis est modi. Autem omnis aut expedita nam. Consectetur mollitia voluptatum quia delectus voluptas doloremque.
+ 
+Dolorem ullam facere earum. Voluptates maiores neque temporibus voluptatibus et placeat quia ut et. Quia aut aut reprehenderit iste expedita omnis est vel voluptas. Dolor libero totam. Voluptatem occaecati ex omnis. Est praesentium minima nobis nihil suscipit natus asperiores aliquid distinctio.
+ 
+Nesciunt aspernatur modi earum. Rerum aut dolorum saepe sit. Tempora facere et laudantium officiis dolore. Nihil consequatur et ad repellat sed.
+ 
+Facilis tenetur et. Et dolorem in quia minima expedita porro voluptas facilis. Dolores neque eum maiores debitis tempora impedit officia veniam. Et delectus dignissimos expedita doloribus qui est. Vero voluptas praesentium odit sed alias modi.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          at laboriosam architecto
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          dicta eius quod
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          447 Zella Track
+          , 
+          FF6
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Pariatur deserunt rerum error nostrum saepe qui. Perferendis quia debitis libero veritatis. Minus dolores asperiores quis et cum non et mollitia. Fuga non libero earum ipsum eos eveniet nihil. Qui ipsa sed nobis error adipisci ut.
+ 
+Omnis quo vel quisquam eos dolores aut. Nam voluptatem impedit suscipit exercitationem. Ut delectus minima illo quasi praesentium occaecati ut eligendi.
+ 
+Facere laboriosam molestiae error. Rerum debitis placeat ipsum non. Magnam qui cupiditate voluptas assumenda delectus dolorum. Et perferendis mollitia. Possimus nisi sed cum eveniet harum.
+ 
+Repudiandae adipisci facere suscipit dolore sint eum ratione minima. Expedita aliquid quia et facere. Fugit laborum omnis voluptas. Accusamus quo qui et beatae fuga doloribus. Tempore aut facilis possimus vel perspiciatis occaecati. Autem et eaque quia.
+ 
+Accusantium itaque dignissimos modi asperiores tempora laboriosam at. Eum sequi aliquid delectus ut similique consequuntur voluptatem maiores. Quo aut eveniet quibusdam. Inventore fugit nemo illo error sit possimus. Est rerum consequatur voluptas itaque nesciunt sed quam sapiente dolore.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          eaque est voluptatem
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          atque sunt eius
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          9139 Keeling Skyway
+          , 
+          EW0
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Sed eum assumenda consequatur iusto. Reprehenderit adipisci et. Ex reiciendis dignissimos ut quod cum et vitae sapiente. Voluptatem esse aut sint quia enim et earum.
+ 
+Veniam ut culpa est doloremque magnam maiores. Perferendis adipisci optio sapiente. Quos dolorum facere facilis voluptatum ea officia. Qui rerum reiciendis rerum libero dolore.
+ 
+Perferendis veniam eius earum blanditiis ducimus reprehenderit maxime. Ut repellendus accusamus sunt iure tenetur sed non vero. Et ea iste est est accusamus et.
+ 
+Ut corrupti cumque in qui. Quae est tempore dolor expedita. Aut quibusdam voluptas illum laborum. Aspernatur necessitatibus mollitia quae deleniti sed ut et. Deserunt consequatur repudiandae.
+ 
+Voluptas quia nemo vel facere. Possimus animi porro ea aut asperiores sint. Iste debitis maxime. Ut eos consequatur qui molestiae suscipit. Voluptatibus distinctio id iste dolorum aliquid necessitatibus adipisci.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          accusamus praesentium occaecati
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          sit occaecati dolore
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          367 Nicholaus Turnpike
+          , 
+          FI1
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Qui amet voluptatem placeat sed. Nihil iusto nesciunt aliquid sed reprehenderit ducimus dolor eaque. Maiores quia vel enim eum. Ab eveniet molestiae voluptatem perferendis qui doloremque explicabo.
+ 
+Qui molestiae praesentium et perferendis qui neque illum. Quidem id repellat facere modi aliquid cum aliquid. Et quo in quam qui occaecati. Earum commodi ducimus beatae laboriosam fugit adipisci.
+ 
+Qui sed asperiores quo commodi et magnam debitis aliquid. Nisi dignissimos quidem. Perferendis vero voluptas ut esse ut. Non deleniti labore ducimus ut dolores. Ut rerum qui quos ea et occaecati nesciunt fuga. Et expedita molestias rerum mollitia perferendis sit.
+ 
+Ipsa labore consequatur ea autem dolorem sint. Officia atque quidem accusantium et. Eum rerum libero ipsam suscipit. Impedit nostrum maiores tenetur.
+ 
+Consequatur laudantium minima. Omnis ut ipsam. Dolorem harum sint voluptatem. Eligendi quod ut velit consequatur quasi exercitationem nulla. Perspiciatis dolores dolorum. Expedita rerum error et aut.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-17 MuiPaper-shadow2-21 MuiPaper-rounded-18"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <div
+        className="MuiCardContent-root-91"
+      >
+        <h3
+          className="MuiTypography-root-67 MuiTypography-title-73"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          ducimus corrupti officiis
+        </h3>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          qui vel repellendus
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-subheading-74"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          3708 Zoie Loaf
+          , 
+          SC6
+          <br />
+          Tue 23rd Jan, 8:00pm - 10:00pm
+        </p>
+        <p
+          className="MuiTypography-root-67 MuiTypography-body1-76"
+        >
+          Quae in ipsum voluptatibus quia beatae. Nihil nam rerum ipsa quisquam itaque ducimus. Ad voluptatem alias provident.
+ 
+Voluptatem nemo enim libero voluptate exercitationem ipsam ut. Aut nobis quasi quos voluptatem unde optio et. Placeat qui dolore. Magnam maxime dolores quae qui. Voluptatem quasi suscipit dolor.
+ 
+Reprehenderit quos ut sint repellat et. Nihil excepturi vitae. Quis iure doloribus qui natus quae.
+ 
+Aperiam temporibus vitae odio aut tempore perferendis ullam et iusto. Pariatur repellat in id molestias. Eos doloribus qui accusamus quae. Velit amet debitis soluta. Beatae quo qui doloribus et modi modi. Hic soluta et velit sunt nostrum enim fugiat odio adipisci.
+ 
+Sint esse illo et ab fuga soluta qui illo. Occaecati ea ut harum amet officia sunt voluptas exercitationem. Blanditiis iusto eos rerum.
+        </p>
+      </div>
+      <div
+        className="MuiCardActions-root-92"
+      >
+        <button
+          className="MuiButtonBase-root-58 MuiButton-root-44 MuiButton-dense-45"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-46"
+          >
+            See More
+          </span>
+          <span
+            className="MuiTouchRipple-root-60"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`/feed should display with no events in feed 1`] = `
+<div>
+  <section
+    className="Hero-root-103"
+  >
+    <div
+      className="Hero-bg-104"
+    />
+    <div
+      className="Hero-content-106"
+    >
+      <span
+        className="Hero-spacer-105"
+      />
+      <h1
+        className="Hero-h1-107"
+      >
+        Get Involved
+      </h1>
+      <h2
+        className="Hero-h2-108"
+      >
+        Meet people nearby who care about the same things as you
+      </h2>
+      <div
+        className="Hero-controls-109"
+      >
+        <div
+          className="MuiPaper-root-110 MuiPaper-shadow5-117"
+          style={
+            Object {
+              "opacity": "0.8",
+              "paddingLeft": "1rem",
+              "whitespace": "nowrap",
+            }
+          }
+        >
+          Showing meetups near
+           
+          <strong>
+            ZD8
+          </strong>
+           
+          <button
+            className="MuiButtonBase-root-151 MuiButton-root-137"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role={undefined}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label-139"
+            >
+              Change
+            </span>
+            <span
+              className="MuiTouchRipple-root-153"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <h3
+    className="MuiTypography-root-160 MuiTypography-headline-165"
+    style={
+      Object {
+        "margin": "1rem",
+      }
+    }
+  >
+    Happening Soon
+  </h3>
+  <div />
+</div>
+`;
