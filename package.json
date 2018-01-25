@@ -17,6 +17,7 @@
     "precommit": "lint-staged && npm test"
   },
   "devDependencies": {
+    "codecov": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
