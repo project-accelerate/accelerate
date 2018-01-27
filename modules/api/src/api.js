@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import fs from "fs";
+import cors from "cors";
 import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import { forEach, mapValues } from "lodash";
@@ -38,12 +39,15 @@ export function createContext() {
 export function createBackend() {
   const app = express();
 
-  if (process.env.NODE_ENV !== "production") {
+  if (process.env.ENABLE_GRAPHIQL && JSON.parse(process.env.ENABLE_GRAPHIQL)) {
     app.get("/graphql-ui", graphiqlExpress({ endpointURL: "/graphql" }));
   }
 
+  app.options("/graphql", cors());
+
   app.post(
     "/graphql",
+    cors(),
     bodyParser.json(),
     graphqlExpress(() => ({
       schema: createSchema(),

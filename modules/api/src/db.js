@@ -1,9 +1,12 @@
 import knex from "knex";
 import knexPostgis from "knex-postgis";
 import { mapKeys, camelCase, snakeCase } from "lodash";
-import config from "../../../knexfile";
 
-export const db = knex(config);
+export const db = knex({
+  client: "pg",
+  connection: process.env.DATABASE_URL
+});
+
 export const gis = knexPostgis(db);
 
 export function distanceFrom(column, location) {

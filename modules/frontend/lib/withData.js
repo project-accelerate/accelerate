@@ -3,6 +3,7 @@ import { fetchQuery } from "react-relay";
 import PropTypes from "prop-types";
 import RelayContextProvider from "relay-context-provider";
 import createEnvironment from "accelerate-api-interface";
+import { BACKEND_URL } from "./config";
 
 export default ({ query }) => ComposedComponent =>
   class extends React.Component {
@@ -13,7 +14,10 @@ export default ({ query }) => ComposedComponent =>
       const inheritedProps = ComposedComponent.getInitialProps
         ? await ComposedComponent.getInitialProps(ctx)
         : {};
-      const environment = createEnvironment();
+
+      const environment = createEnvironment({
+        backendUrl: BACKEND_URL
+      });
 
       const variables = {
         ...ctx.query,
@@ -42,6 +46,7 @@ export default ({ query }) => ComposedComponent =>
     }
 
     environment = createEnvironment({
+      backendUrl: BACKEND_URL,
       records: this.props.queryRecords
     });
 

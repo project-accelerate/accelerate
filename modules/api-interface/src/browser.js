@@ -1,14 +1,18 @@
 import { Environment, Network, RecordSource, Store } from "relay-runtime";
-import fetch from "isomorphic-fetch";
+import { fetchQuery } from "./fetchQuery";
 
 let environment = null;
 
-export default function browserApiInterface({ records = {} } = {}) {
+// Browser Relay interface is created once and cached
+export default function browserApiInterface({
+  records = {},
+  backendUrl = "/graphql"
+} = {}) {
   if (environment) {
     return environment;
   }
 
-  const network = Network.create(fetchQuery);
+  const network = Network.create(fetchQuery({ backendUrl }));
   const store = new Store(new RecordSource(records));
 
   environment = new Environment({
@@ -17,18 +21,4 @@ export default function browserApiInterface({ records = {} } = {}) {
   });
 
   return environment;
-}
-
-function fetchQuery(operation, variables) {
-  return fetch("/graphql", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      query: operation.text,
-      variables
-    })
-  }).then(response => response.json());
 }
