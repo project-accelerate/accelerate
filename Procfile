@@ -1,2 +1,2 @@
-web: node server.js
-release: bash scripts/release.sh
+web: node web
+release: node scripts/release

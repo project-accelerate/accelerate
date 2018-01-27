@@ -1,7 +1,14 @@
+/* eslint-disable react/no-danger */
+
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
+import serializeConfig from "serialize-javascript";
 import JssProvider from "react-jss/lib/JssProvider";
+import { pick } from "lodash";
 import getPageContext from "../lib/material-ui/getPageContext";
+import { frontendEnvironment } from "../package.json";
+
+const clientEnv = pick(process.env, frontendEnvironment);
 
 class MyDocument extends Document {
   render() {
@@ -10,8 +17,15 @@ class MyDocument extends Document {
     return (
       <html lang="en" dir="ltr">
         <Head>
-          <title>My page</title>
           <meta charSet="utf-8" />
+
+          {/* Send configuration to client */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.ENV=${serializeConfig(clientEnv)}`
+            }}
+          />
+
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
             name="viewport"
@@ -20,6 +34,7 @@ class MyDocument extends Document {
               "minimum-scale=1, width=device-width, height=device-height"
             }
           />
+
           {/* PWA primary color */}
           <meta
             name="theme-color"
@@ -70,7 +85,6 @@ MyDocument.getInitialProps = ctx => {
     styles: (
       <style
         id="jss-server-side"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: pageContext.sheetsRegistry.toString()
         }}

@@ -3,8 +3,7 @@ const { parse } = require("url");
 const qs = require("querystring");
 
 exports.frontend = next({
-  dev: process.env.NODE_ENV !== "production",
-  dir: "modules/frontend"
+  dev: process.env.NODE_ENV !== "production"
 });
 
 exports.render = (req, res) => {
