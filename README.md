@@ -1,5 +1,5 @@
-Accelerate
-===
+# Accelerate
+
 
 This project contains the accelerate app. It is a single page application served from Heroku. The primary technologies:
 
@@ -11,57 +11,58 @@ This project contains the accelerate app. It is a single page application served
 
 The codebase is split into separate modules, which are deployed to a single Heroku app. You can find these in the `/modules` directory. Check each module's documentation for more information.
 
-Getting started
-===
 
-Prerequisites
 ---
+## Getting started
+
+### Prerequisites
+
 * [Node.js](https://nodejs.org/)
-* [Watchman](https://facebook.github.io/watchman/docs/install.html)
-* [Gulp](https://gulpjs.com/) (`npm install -g gulp-cli`)
+* [Git](https://git-scm.com/)
 
-Installation
----
+
+### Installation and first run
+
+*Instructions are given for Mac/Linux systems, but we intend to support Windows develop. Please open an issue or ask in #accelerate-dev if you have any issues running on Windows.*
+
 ````
 git clone https://github.com/project-accelerate/accelerate.git
 cd accelerate
 npm install
+cd modules/frontend
+npm start
+
 ````
 
-You will need a `.env` file containing your dev configuration at the root of the project. This is not checked into the git repo, but you will be able to obtain one on the slack channel.
 
-Development workflow
+### Next steps
+
+Check out the documentation for the relevant module. Unless you know otherwise, it's probably either the [frontend](./modules/frontend) or [api](./modules/api).
+
+
 ---
 
-````
-## Starts a local development server
-gulp
+## Infrastructure Overview
 
-## Run linters against source and fix an auto-fixable errors
-npm run lint:fix
+*If you aren't familiar with Heroku, then this serve as a very quick intro, but you should check Heroku's documentation for more information*
 
-## Run linters against source and fix an auto-fixable errors
-npm run pretty
-````
+This app is split into separate modules, which you can find in the [(modules)(./modules) directory. Some of these are libraries imported in other modules, some will be run as worker (background) processes on Heroku, others will define routes that are mounted into the web process. Check the [Procfile](./Procfile) for details about worker process (everything except web and release processes is a worker).
 
-As part of the install, this repository adds githooks to automatically
-run the lint & code-formatting scripts on commit.
+Check [web.js](./web.js) for the modules mounted into the web process. Only these will be accessible from the web.
 
-If you aren't able to commit, try running the linter and fixing the errors.
+Modules can also be run as self-contained services in development. When they connect to external services, they may need configuring with URLs, credentials, etc. Wherever possible, a base config sufficient to run locally will be provided in this repository (in a file named `development.base.env` file in the root dir of the module). In some cases, (such as credentials or linking to local modules you may need to provide overrides. These are placed in a fine named `development.env` in the root dir of the module. Where this is the case, it will be documented in the module's readme. The base config should document the configuration variables are.
 
-Running against a local database
+
 ---
 
-[TODO]
+## Database Configuration
 
+Database migrations and test data seeds are written using [Knex](http://knexjs.org/) and live in [db](./db).
 
-Contributing guide
-===
+You don't need a local database for frontend development. However if you want to get started with a local database quickly, you can spin up a docker image and seed it with test events by running:
 
-[TODO]
-
-
-License
-===
-
-[TODO]
+```
+docker run -d -p 5432:5432 mdillon/postgis
+npm run db:migrate
+npm run db:seed
+```

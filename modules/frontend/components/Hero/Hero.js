@@ -7,18 +7,20 @@ const styles = theme => ({
     position: "relative",
     borderBottom: "2px solid red",
     height: "66vh",
+    overflow: "hidden",
 
     color: "white",
     backgroundColor: theme.palette.background.default,
     textAlign: "center"
   },
   bg: {
-    filter: "blur(3px)",
     position: "absolute",
 
+    filter: "blur(10px)",
     backgroundImage: "url('/static/get-involved.jpg')",
     backgroundPositiondefault: "bottom center",
     backgroundSize: "cover",
+
     width: "100%",
     height: "100%"
   },
@@ -34,7 +36,7 @@ const styles = theme => ({
     justifyContent: "center",
     alignItems: "center",
 
-    backgroundColor: "rgba(200, 50, 50, 0.1)",
+    // backgroundColor: "rgba(200, 50, 50, 0.8)",
     width: "100%",
     height: "100%",
     zIndex: "1"

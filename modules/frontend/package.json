@@ -2,6 +2,7 @@
   "name": "frontend",
   "private": true,
   "dependencies": {
+    "accelerate-api": "../api",
     "accelerate-api-interface": "../api-interface",
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",
@@ -23,17 +24,34 @@
     "recompose": "^0.26.0",
     "relay-context-provider": "^1.0.4",
     "relay-query-lookup-renderer": "^2.0.2",
-    "relay-runtime": "^1.4.1"
+    "relay-runtime": "^1.4.1",
+    "serialize-javascript": "^1.4.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.0.0-beta.37",
     "@storybook/addon-actions": "^3.3.6",
     "@storybook/addon-links": "^3.3.6",
-    "@storybook/react": "^3.3.6"
+    "@storybook/react": "^3.3.6",
+    "faker": "^4.1.0",
+    "jest": "^22.1.4",
+    "react-test-renderer": "^16.2.0",
+    "relay-compiler": "^1.4.1",
+    "relay-mock-network-layer": "^1.2.0"
   },
   "scripts": {
-    "build": "next build",
+    "build": "node scripts/build",
     "storybook": "start-storybook -p 6006 -s .",
-    "build-storybook": "build-storybook"
-  }
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "start": "node devserver"
+  },
+  "jest": {
+    "setupFiles": [
+      "./testSetup.js"
+    ],
+    "collectCoverage": true
+  },
+  "frontendEnvironment": [
+    "BACKEND_URL"
+  ]
 }

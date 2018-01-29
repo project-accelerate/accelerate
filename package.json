@@ -5,17 +5,19 @@
   },
   "private": true,
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "pretty": "prettier --ignore-path .gitignore --write --tab-width 2 \"**/*.js\"",
-    "postinstall": "gulp setup",
-    "heroku-postbuild": "gulp build",
+    "db:init-dev": "npm run db:revert && npm run db:migrate && npm run db:seed",
     "db:migrate": "knex-migrate up",
     "db:seed": "knex seed:run",
     "db:revert": "knex-migrate down --to 0",
-    "precommit": "lint-staged && npm test"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "pretty": "prettier --ignore-path .gitignore --write --tab-width 2 \"**/*.js\"",
+    "postinstall": "node scripts/bootstrap",
+    "precommit": "lint-staged && npm test",
+    "test": "node scripts/test"
   },
   "devDependencies": {
+    "codecov": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -23,8 +25,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.0",
     "husky": "^0.14.3",
-    "linklocal": "^2.8.1",
     "lint-staged": "^6.0.1",
+    "nodemon": "^1.14.11",
     "prettier": "^1.9.2"
   },
   "dependencies": {
@@ -41,9 +43,6 @@
     "express": "^4.16.2",
     "fetch": "^1.1.0",
     "geoip-lite": "^1.2.1",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
-    "gulp-shell": "^0.6.5",
     "knex": "^0.14.2",
     "knex-migrate": "^1.5.1",
     "knex-postgis": "^0.5.0",

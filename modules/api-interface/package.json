@@ -1,5 +1,8 @@
 {
   "name": "accelerate-api-interface",
+  "scripts": {
+    "build": "../../node_modules/.bin/babel src --out-dir .build"
+  },
   "dependencies": {
     "accelerate-api": "../api",
     "isomorphic-fetch": "^2.2.1",

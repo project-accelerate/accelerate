@@ -4,7 +4,10 @@ const qs = require("querystring");
 
 exports.frontend = next({
   dev: process.env.NODE_ENV !== "production",
-  dir: "modules/frontend"
+  dir: __dirname,
+  conf: {
+    distDir: ".build"
+  }
 });
 
 exports.render = (req, res) => {
