@@ -1,6 +1,9 @@
 import React from "react";
 import { fromPairs } from "lodash";
 
+/**
+ * Higher-order component abstracting NextJS's getInitialProps.
+ */
 export function withInitialProps(fetchers) {
   return ComposedComponent =>
     class extends React.Component {
