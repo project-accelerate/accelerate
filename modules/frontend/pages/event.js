@@ -7,8 +7,7 @@ import withStyles from "material-ui/styles/withStyles";
 import Card from "material-ui/Card/Card";
 import CardContent from "material-ui/Card/CardContent";
 import { compose } from "recompose";
-import withData from "../lib/withData";
-import PageWrapper from "../components/Page";
+import { pageRoot } from "../lib/page/page";
 
 const styles = theme => ({
   paragraph: {
@@ -24,45 +23,39 @@ const styles = theme => ({
 
 function EventPage({ event, classes }) {
   return (
-    <PageWrapper>
-      <Card>
-        <CardContent>
-          <Typography
-            className={classes.heading}
-            type="headline"
-            component="h1"
-          >
-            {event.title}
-          </Typography>
-          <Typography className={classes.heading} type="body1" component="h2">
-            Organised by <strong>{event.organiser}</strong>
-          </Typography>
-          <Typography className={classes.heading} type="body1" component="h3">
-            {getTimings(event)}
-          </Typography>
-          <Typography className={classes.heading} type="body1" component="p">
-            {event.address.split(`\n`).map(line => (
-              <span>
-                {line}
-                <br />
-              </span>
-            ))}
-            {event.postcode}
-          </Typography>
-          <section className={classes.section}>
-            {event.longDescription.split("\n").map(paragraph => (
-              <Typography
-                className={classes.paragraph}
-                type="body2"
-                component="p"
-              >
-                {paragraph}
-              </Typography>
-            ))}
-          </section>
-        </CardContent>
-      </Card>
-    </PageWrapper>
+    <Card>
+      <CardContent>
+        <Typography className={classes.heading} type="headline" component="h1">
+          {event.title}
+        </Typography>
+        <Typography className={classes.heading} type="body1" component="h2">
+          Organised by <strong>{event.organiser}</strong>
+        </Typography>
+        <Typography className={classes.heading} type="body1" component="h3">
+          {getTimings(event)}
+        </Typography>
+        <Typography className={classes.heading} type="body1" component="p">
+          {event.address.split(`\n`).map(line => (
+            <span>
+              {line}
+              <br />
+            </span>
+          ))}
+          {event.postcode}
+        </Typography>
+        <section className={classes.section}>
+          {event.longDescription.split("\n").map(paragraph => (
+            <Typography
+              className={classes.paragraph}
+              type="body2"
+              component="p"
+            >
+              {paragraph}
+            </Typography>
+          ))}
+        </section>
+      </CardContent>
+    </Card>
   );
 }
 
@@ -83,7 +76,7 @@ EventPage.propTypes = {
 };
 
 export default compose(
-  withData({
+  pageRoot({
     query: graphql`
       query event_Query($id: ID!) {
         event(id: $id) {

@@ -7,13 +7,12 @@ import Postcode from "postcode";
 import Typography from "material-ui/Typography";
 import Button from "material-ui/Button/Button";
 import Paper from "material-ui/Paper/Paper";
-import withData from "../lib/withData";
 import EventFeed from "../components/EventFeed/EventFeed";
 import EventSearchForm from "../components/EventSearchForm/EventSearchForm";
 import Hero from "../components/Hero/Hero";
-import PageWrapper from "../components/Page";
 import { withInitialProps } from "../lib/withInitialProps";
 import { lookupPostcode } from "../lib/lookupPostcode";
+import { pageRoot } from "../lib/page/page";
 
 function FeedPage({
   eventFeed,
@@ -23,7 +22,7 @@ function FeedPage({
   searchVisible
 }) {
   return (
-    <PageWrapper>
+    <div>
       <EventSearchForm
         open={searchVisible}
         defaultValue={postcode}
@@ -64,7 +63,7 @@ function FeedPage({
         Happening Soon
       </Typography>
       <EventFeed events={eventFeed} />
-    </PageWrapper>
+    </div>
   );
 }
 
@@ -77,7 +76,7 @@ FeedPage.propTypes = {
 };
 
 export default compose(
-  withData({
+  pageRoot({
     query: graphql`
       query feed_Query($postcode: String!) {
         eventFeed(postcode: $postcode, distanceInKM: 10) {
