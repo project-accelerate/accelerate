@@ -3,9 +3,13 @@ import withStyles from "material-ui/styles/withStyles";
 import { base } from "../../styles/base";
 import pageData from "./pageData";
 import withMaterialUI from "../material-ui/withMaterialUI";
+import { pageAuth } from "./pageAuth";
 
-export function pageRoot({ query }) {
+export function pageRoot({ query, auth, redirectPage } = {}) {
   return compose(
+    // Redirect to login if needed
+    pageAuth({ auth, redirectPage }),
+
     // Fetch any data dependencies
     pageData({ query }),
 
