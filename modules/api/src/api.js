@@ -1,7 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 import fs from "fs";
-import cors from "cors";
+import { withUser, loginEndpoint } from "accelerate-authentication";
 import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import { forEach, mapValues } from "lodash";
@@ -43,11 +44,12 @@ export function createBackend() {
     app.get("/graphql-ui", graphiqlExpress({ endpointURL: "/graphql" }));
   }
 
-  app.options("/graphql", cors());
+  app.post("/login", bodyParser.json(), loginEndpoint());
 
   app.post(
     "/graphql",
-    cors(),
+    cookieParser(),
+    withUser(),
     bodyParser.json(),
     graphqlExpress(() => ({
       schema: createSchema(),
