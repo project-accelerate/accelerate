@@ -41,7 +41,6 @@ export function getAuthConfig() {
         jwksUri
       });
     },
-    jwtAudience: UserPoolId,
     get jwtIssuer() {
       return env
         .get("COGNITO_JWT_ISSUER")
