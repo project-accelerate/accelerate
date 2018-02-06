@@ -2,7 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import fs from "fs";
-import { withUser, loginEndpoint } from "accelerate-authentication";
+import {
+  withUser,
+  loginEndpoint,
+  authDirectives
+} from "accelerate-authentication";
 import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import { forEach, mapValues } from "lodash";
@@ -27,13 +31,15 @@ const resolverModules = [EventResolvers];
 export function createSchema() {
   return makeExecutableSchema({
     typeDefs,
-    resolvers: mergeTypeResolvers(resolverModules)
+    resolvers: mergeTypeResolvers(resolverModules),
+    directiveResolvers: authDirectives
   });
 }
 
-export function createContext() {
+export function createContext(req) {
   return {
-    connectors: mapValues(connectorClasses, C => new C())
+    connectors: mapValues(connectorClasses, C => new C()),
+    user: req.user
   };
 }
 
@@ -51,9 +57,9 @@ export function createBackend() {
     cookieParser(),
     withUser(),
     bodyParser.json(),
-    graphqlExpress(() => ({
+    graphqlExpress(req => ({
       schema: createSchema(),
-      context: createContext()
+      context: createContext(req)
     }))
   );
 

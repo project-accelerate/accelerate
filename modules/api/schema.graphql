@@ -1,3 +1,6 @@
+# Restrict to users who are registered and authenticated
+directive @isRegistered on QUERY | FIELD
+
 interface Node {
   id: ID!
 }
