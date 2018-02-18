@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Authentication middleware for accelerate app",
   "main": ".build/index.js",
+  "browser": ".build/browser.js",
   "scripts": {
     "build": "../../node_modules/.bin/babel src --out-dir .build",
     "test": "../../node_modules/.bin/jest"

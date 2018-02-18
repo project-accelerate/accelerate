@@ -15,3 +15,4 @@ if (process.env.NODE_ENV !== "production") {
 export * from "./withUser";
 export * from "./loginEndpoint";
 export * from "./authDirectives";
+export * from "./guards";
