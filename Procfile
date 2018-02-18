@@ -1,2 +1,2 @@
 web: node web
-release: node scripts/release
+release: npm run db:migrate

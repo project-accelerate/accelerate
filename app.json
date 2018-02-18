@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "postdeploy": "npm run db:seed"
+  },
+  "env": {
+    "ENABLE_GRAPHIQL": {
+      "value": false,
+      "required": false 
+    },
+    "COGNITO_USER_POOL_ID": {
+      "required": true
+    },
+    "COGNITO_CLIENT_ID": {
+      "required": true
+    },
+    "COGNITO_CLIENT_SECRET": {
+      "required": true
+    },
+    "COGNITO_JWT_ISSUER": {
+      "required": true
+    },
+    "COGNITO_JWT_KEY_URI": {
+      "required": true
+    },
+    "AWS_REGION": {
+      "required": true
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    }
+  }
+}
