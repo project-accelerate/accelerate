@@ -5,6 +5,7 @@
   "dependencies": {
     "accelerate-api": "../api",
     "accelerate-api-interface": "../api-interface",
+    "async-wait-until": "^1.1.5",
     "browser-cookies": "^1.2.0",
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",
