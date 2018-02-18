@@ -4,12 +4,12 @@ import { compose } from "recompose";
 import Router from "next/router";
 import TextField from "material-ui/TextField";
 import Button from "material-ui/Button";
+import { isLoggedOut } from "accelerate-authentication";
 import CircularProgress from "material-ui/Progress/CircularProgress";
 import { actions } from "../lib/action";
 import { loginUser } from "../lib/loginUser";
 import { form } from "../lib/form";
 import { pageRoot } from "../lib/page/page";
-import { isLoggedOut } from "../lib/page/guards";
 
 function LoginPage({ onSubmit, fields: { username, password }, formIsValid }) {
   if (onSubmit.pending || onSubmit.succeeded) {
