@@ -16,6 +16,7 @@ The codebase is split into separate modules, which are deployed to a single Hero
 
 * [Node.js](https://nodejs.org/)
 * [Git](https://git-scm.com/)
+* [Yarn](https://yarnpkg.com/)
 
 ### Installation and first run
 
@@ -25,9 +26,9 @@ The codebase is split into separate modules, which are deployed to a single Hero
 ````bash
 git clone https://github.com/project-accelerate/accelerate.git
 cd accelerate
-npm install
+yarn
 cd modules/frontend
-npm start
+yarn start
 ````
 
 ### Next steps
@@ -62,12 +63,12 @@ You don't need a local database for frontend development. However if you want to
 
 ```bash
 docker run -d -p 5432:5432 mdillon/postgis
-npm run db:migrate
-npm run db:seed
+yarn db:migrate
+yarn db:seed
 ```
 
 If you want to add a new migration file, you can scaffold a new one by running:
 
 ```bash
-npm run db:add-migration "name-of-migration"
+yarn db:add-migration "name-of-migration"
 ```

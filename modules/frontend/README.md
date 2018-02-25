@@ -6,7 +6,7 @@ This module contains the frontend for the Accelerate app.
 
 * Make sure you've followed the initial setup guide and general workflow outlined in the [Project Readme](../../readme.md)
 
-* Run `npm start` in this directory.
+* Run `yarn start` in this directory.
 
 ## Code Structure
 
@@ -24,7 +24,7 @@ This module contains the frontend for the Accelerate app.
 
   * Tests are written using the [Jest](https://facebook.github.io/jest/) framework. It is a 'batteries-included' framework that includes lots of assertion matchers, helpers for testing React components.
 
-    * Run them using `npm test`
+    * Run them using `yarn test`
 
   * Tests for pages live in the top-level directory (the same one as this readme). They are an exception to the convention because otherwise they would be treated as pages by the build system.
 
@@ -90,7 +90,7 @@ https://storybook.js.org/
 
 Storybooks provide a development environment for working on React components in isolation from the rest of the app. Stories are example instances of a React component (eg: a user profile with some pre-set data about the user).
 
-This project has includes a storybook. It follows the convention of picking stories up from any file ending in `.stories.js`. You can launch the storybook server by running `npm run storybook` from the command-line.
+This project has includes a storybook. It follows the convention of picking stories up from any file ending in `.stories.js`. You can launch the storybook server by running `yarn storybook` from the command-line.
 
 ### Nextjs
 

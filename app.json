@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postdeploy": "npm run db:seed"
+    "postdeploy": "yarn db:seed"
   },
   "env": {
     "ENABLE_GRAPHIQL": {
