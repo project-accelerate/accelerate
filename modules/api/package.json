@@ -1,6 +1,7 @@
 {
   "name": "accelerate-api",
   "private": true,
+  "version": "0.0.0",
   "main": ".build/api.js",
   "scripts": {
     "start": "../../node_modules/.bin/nodemon devserver",

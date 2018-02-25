@@ -13,9 +13,9 @@ bootstrapModule("frontend");
 function bootstrapModule(moduleName) {
   const modulePath = path.join(__dirname, "..", "modules", moduleName);
 
-  execSync("npm install --prefer-offline", {
+  execSync("yarn", {
     cwd: modulePath,
     stdio: "inherit"
   });
-  execSync("npm run build", { cwd: modulePath, stdio: "inherit" });
+  execSync("yarn build", { cwd: modulePath, stdio: "inherit" });
 }
