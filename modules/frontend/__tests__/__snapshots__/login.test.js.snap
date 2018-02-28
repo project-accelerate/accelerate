@@ -10,7 +10,6 @@ exports[`/login should match snapshot 1`] = `
     className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
     onBlur={[Function]}
     onFocus={[Function]}
-    required={false}
     variant="email"
   >
     <label
@@ -30,7 +29,7 @@ exports[`/login should match snapshot 1`] = `
         aria-required={false}
         autoComplete="email"
         autoFocus={undefined}
-        className="MuiInput-input-24 MuiInput-inputSingleline-27"
+        className="MuiInput-input-24"
         defaultValue={undefined}
         disabled={false}
         id="email"
@@ -52,7 +51,6 @@ exports[`/login should match snapshot 1`] = `
     className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
     onBlur={[Function]}
     onFocus={[Function]}
-    required={false}
     variant="password"
   >
     <label
@@ -72,7 +70,7 @@ exports[`/login should match snapshot 1`] = `
         aria-required={false}
         autoComplete="current-password"
         autoFocus={undefined}
-        className="MuiInput-input-24 MuiInput-inputSingleline-27"
+        className="MuiInput-input-24 MuiInput-inputType-27"
         defaultValue={undefined}
         disabled={false}
         id="password"
@@ -90,7 +88,7 @@ exports[`/login should match snapshot 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root-44 MuiButtonBase-disabled-45 MuiButton-root-30 MuiButton-disabled-40"
+    className="MuiButtonBase-root-45 MuiButtonBase-disabled-46 MuiButton-root-30 MuiButton-disabled-39"
     disabled={true}
     id="submit"
     onBlur={[Function]}
@@ -104,12 +102,11 @@ exports[`/login should match snapshot 1`] = `
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    role={undefined}
     tabIndex={-1}
     type="button"
   >
     <span
-      className="MuiButton-label-32"
+      className="MuiButton-label-31"
     >
       Log In
     </span>
