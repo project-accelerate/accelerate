@@ -8,12 +8,14 @@ exports[`/event should match snapshot 1`] = `
     className="MuiCardContent-root-31"
   >
     <h1
-      className="MuiTypography-root-32 MuiTypography-headline-37 EventPage-heading-2"
+      className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-heading-2"
+      type="headline"
     >
       optio quo quis
     </h1>
     <h2
       className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-heading-2"
+      type="body1"
     >
       Organised by 
       <strong>
@@ -22,11 +24,13 @@ exports[`/event should match snapshot 1`] = `
     </h2>
     <h3
       className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-heading-2"
+      type="body1"
     >
       Tue 23rd Jan, 8:00pm - 10:00pm
     </h3>
     <p
       className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-heading-2"
+      type="body1"
     >
       <span>
         2657 Jones Roads
@@ -38,30 +42,35 @@ exports[`/event should match snapshot 1`] = `
       className="EventPage-section-3"
     >
       <p
-        className="MuiTypography-root-32 MuiTypography-body2-40 EventPage-paragraph-1"
+        className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-paragraph-1"
+        type="body2"
       >
         Deleniti eos reprehenderit in nisi et qui. Odio et inventore eligendi in. Id harum sit odio quia vitae provident. Provident molestiae harum ullam pariatur quos est quod. Ea quisquam esse quia expedita commodi autem.
       </p>
       <p
-        className="MuiTypography-root-32 MuiTypography-body2-40 EventPage-paragraph-1"
+        className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-paragraph-1"
+        type="body2"
       >
          
 Exercitationem doloribus harum voluptas. Omnis et accusantium. Quia quos sequi molestiae beatae enim.
       </p>
       <p
-        className="MuiTypography-root-32 MuiTypography-body2-40 EventPage-paragraph-1"
+        className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-paragraph-1"
+        type="body2"
       >
          
 Placeat saepe eligendi rerum excepturi et. Fuga similique fugit corporis voluptatem dolores. Nobis et sint magnam aut atque. Maiores incidunt occaecati iusto laborum facere. Deleniti dolorem quibusdam. Veniam perspiciatis et nisi aut corporis laboriosam.
       </p>
       <p
-        className="MuiTypography-root-32 MuiTypography-body2-40 EventPage-paragraph-1"
+        className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-paragraph-1"
+        type="body2"
       >
          
 Soluta accusamus officiis ut excepturi blanditiis libero ut. Quo fuga enim tempore non voluptas quia. Ipsam voluptas necessitatibus. Dolor adipisci dolores sunt.
       </p>
       <p
-        className="MuiTypography-root-32 MuiTypography-body2-40 EventPage-paragraph-1"
+        className="MuiTypography-root-32 MuiTypography-body1-41 EventPage-paragraph-1"
+        type="body2"
       >
          
 Occaecati rerum nesciunt. Sint est asperiores sit voluptatum mollitia enim iste. Nesciunt minima sequi voluptas optio aut voluptatem.
