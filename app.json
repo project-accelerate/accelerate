@@ -4,7 +4,6 @@
   },
   "env": {
     "ENABLE_GRAPHIQL": {
-      "value": false,
       "required": false 
     },
     "COGNITO_USER_POOL_ID": {
