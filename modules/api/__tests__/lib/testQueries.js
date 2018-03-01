@@ -1,7 +1,7 @@
-import { query } from "./query";
+import { fetchQuery } from "./testFetch";
 
 export function eventFeed(opts) {
-  return query({
+  return fetchQuery({
     query: `
       query EventFeed($postcode: String!, $distanceInKM: Float!, $cursor: String) {
         eventFeed(postcode: $postcode, distanceInKM: $distanceInKM, cursor: $cursor) {
