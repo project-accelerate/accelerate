@@ -32,7 +32,7 @@ export const Query = {
     return encodeResultsPage({
       limit,
       rows: events,
-      getCursor: (id, date) => ({ startDate: date, startId: id })
+      getCursor: ({ id, startDate: date }) => ({ startDate: date, startId: id })
     });
   }
 };
@@ -54,7 +54,7 @@ export const Mutation = {
       endDate: new Date(request.endDate)
     };
 
-    await EventConnector.create(event);
+    await EventConnector.create({ event });
 
     return {
       event: event.id

@@ -17,7 +17,7 @@ export function encodeResultsPage({ limit, rows, getCursor }) {
   const returnedRows = rows.slice(0, limit);
 
   return {
-    nextCursor: encodeCursor(getCursor(nextRow)),
+    nextCursor: nextRow && encodeCursor(getCursor(nextRow)),
     edges: returnedRows.map(row => ({
       cursor: encodeCursor(getCursor(row)),
       node: row.id
