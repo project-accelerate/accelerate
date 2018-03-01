@@ -19,11 +19,15 @@ export function distanceFrom(column, location) {
 }
 
 export function isLessThan(lhs, rhs) {
-  return db.raw(`? <= ?`, [lhs, rhs]);
+  return db.raw(`? < ?`, [lhs, rhs]);
 }
 
 export function isGreaterThan(lhs, rhs) {
   return db.raw(`? > ?`, [lhs, rhs]);
+}
+
+export function columnIsGreaterThan(column, rhs) {
+  return db.raw(`${column} > ?`, [rhs]);
 }
 
 export function squared(x) {

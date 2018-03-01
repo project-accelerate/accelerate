@@ -1,14 +1,15 @@
 import DataLoader from "dataloader";
 import {
   db,
-  isGreaterThan,
+  gis,
   isLessThan,
   distanceFrom,
   pair,
   sortColumn,
   sortClauses,
   toCamelCase,
-  fromCamelCase
+  fromCamelCase,
+  columnIsGreaterThan
 } from "../db";
 import { dataloaderResult } from "../utils";
 
@@ -25,7 +26,12 @@ export default class EventConnector {
   });
 
   /** Insert a new event into the database */
-  async create(_, { event }) {
+  async create({ event: { location, ...eventProps } }) {
+    const event = {
+      ...eventProps,
+      location: gis.makePoint(location.longitude, location.latitude)
+    };
+
     await db("event").insert([fromCamelCase(event)]);
   }
 
@@ -40,8 +46,8 @@ export default class EventConnector {
       .modify(q => {
         if (startDate && startId) {
           q.andWhere(
-            isGreaterThan(
-              pair("start_date", "id"),
+            columnIsGreaterThan(
+              "(start_date, id)",
               pair(new Date(startDate), startId)
             )
           );
