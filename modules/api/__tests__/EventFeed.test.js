@@ -2,10 +2,10 @@
 
 import { times, last } from "lodash";
 import { endOfTomorrow, addHours } from "date-fns";
-import { withUniqueDatabase } from "../lib/db";
-import { createEventRequest, defaultTestPostcode } from "../lib/data";
-import { createEvent } from "../lib/mutations";
-import { eventFeed } from "../lib/queries";
+import { withUniqueDatabase } from "./lib/testDb";
+import { createEventRequest, defaultTestPostcode } from "./lib/testData";
+import { createEvent } from "./lib/testMutations";
+import { eventFeed } from "./lib/testQueries";
 
 const PAGE_SIZE = 10;
 const TEST_EVENT_COUNT = 15;

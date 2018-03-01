@@ -5,7 +5,8 @@
   "main": ".build/api.js",
   "scripts": {
     "start": "../../node_modules/.bin/nodemon devserver",
-    "build": "../../node_modules/.bin/babel src --out-dir .build"
+    "build": "../../node_modules/.bin/babel src --out-dir .build",
+    "test": "jest"
   },
   "dependencies": {
     "accelerate-authentication": "file:../authentication",
@@ -24,5 +25,22 @@
     "node-fetch": "^2.0.0",
     "pg": "^7.4.1",
     "uuid": "^3.2.1"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "__tests__/lib/",
+      "<rootDir>/coverage",
+      "node_modules"
+    ],
+    "setupFiles": [
+      "./testSetup.js"
+    ],
+    "collectCoverage": true
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "faker": "^4.1.0",
+    "graphql": "^0.13.1",
+    "jest": "^22.4.2"
   }
 }

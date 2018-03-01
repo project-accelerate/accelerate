@@ -1,7 +1,7 @@
-import { query } from "./query";
+import { fetchQuery } from "./testFetch";
 
 export function createEvent({ event }) {
-  return query({
+  return fetchQuery({
     query: `
       mutation CreateEvent($event: CreateEvent!) {
         createEvent(request: $event) { event { id } }
