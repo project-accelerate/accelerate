@@ -1,34 +1,36 @@
-import { identity } from "lodash";
+import { parse } from "graphql";
+import * as fs from "fs";
 
 /*
- * Create a resolver function that fetches a resource from a named connector,
- * then returns a specified property from that resource, optionally transforming
- * it using a provided transform function.
+ * Wrap a model type to produce a resolver map for that type.
+ * 
+ * This handles the common case where there is a 1-1 correspondence between
+ * the fields defined for a  and those of a model.
  */
-export function getProperty({
-  connector: connectorName,
-  transform = identity,
-  fromKey
-}) {
-  return (id, props, { connectors }, { fieldName }) => {
-    const connector = connectors[connectorName];
+export function resolversForNode(ModelType, { schemaDef } = {}) {
+  const schema = parse(schemaDef || fs.readFileSync("schema.graphql", "utf8"));
+  const typeName = ModelType.name;
 
-    return connector
-      .getById(id)
-      .then(result => result[fromKey || fieldName])
-      .then(transform);
-  };
-}
+  const schemaType = schema.definitions.find(
+    def => def.name.value === typeName
+  );
+  const resolvers = {};
 
-/**
- * Create a resolver funcion that simply returns the parent value as the result of
- * the resolver.
- *
- * This is suitable for an `id` property of a node in the schema. The parent value
- * (representing the node) should just be its ID.
- */
-export function nodeID() {
-  return id => id;
+  schemaType.fields.forEach(field => {
+    const fieldName = field.name.value;
+
+    resolvers[fieldName] = async (id, props, context) => {
+      const model = await new ModelType(id, context);
+
+      if (typeof model[fieldName] === "function") {
+        return model[fieldName](props);
+      }
+
+      return model[fieldName];
+    };
+  });
+
+  return resolvers;
 }
 
 /**

@@ -1,3 +1,4 @@
+import uuid from "uuid";
 import {
   db,
   gis,
@@ -12,7 +13,7 @@ import {
 } from "../lib/db";
 import { createBatchingGetById } from "../lib/connectorUtils";
 
-export default class EventConnector {
+export default class EventTableConnector {
   getById = createBatchingGetById({
     async loadResources(ids) {
       return db
@@ -24,13 +25,17 @@ export default class EventConnector {
   });
 
   /** Insert a new event into the database */
-  async create({ event: { location, ...eventProps } }) {
+  async create({ location, startDate, endDate, ...eventProps }) {
     const event = {
       ...eventProps,
+      id: uuid(),
+      startDate: new Date(startDate),
+      endDate: new Date(endDate),
       location: gis.makePoint(location.longitude, location.latitude)
     };
 
     await db("event").insert([fromCamelCase(event)]);
+    return event;
   }
 
   /** Get events near to a location */

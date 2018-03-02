@@ -1,91 +1,23 @@
-import uuid from "uuid";
-import { nodeID, getProperty, getNode } from "../lib/resolverUtils";
-import { decodeCursor, encodeCursor } from "../lib/cursor";
+import { getNode, resolversForNode } from "../lib/resolverUtils";
+import { Event } from "../domain/Event";
+import { EventFeed } from "../domain/EventFeed";
 
-export const Query = {
-  event: getNode(),
+export default {
+  Query: {
+    event: getNode(),
 
-  eventFeed: async (_, { postcode, distanceInKM, cursor }, { connectors }) => {
-    const limit = 10;
-    const { EventConnector, PostcodeConnector } = connectors;
-
-    const location = await PostcodeConnector.getById(postcode);
-    if (!location) {
-      throw new Error(`Invalid postcode: ${postcode}`);
+    eventFeed(_, params, context) {
+      return EventFeed.forPostcode(params, context);
     }
+  },
 
-    const { startDate, startId } = decodeCursor(cursor, { defaultValue: {} });
-    const events = await EventConnector.nearbyEvents({
-      location,
-      distanceInKM,
-      limit,
-      startDate,
-      startId
-    });
-
-    return {
-      edges: events.map(event => ({
-        node: event.id,
-        cursor: encodeCursor({ startDate: event.startDate, startId: event.id }),
-        distance: event.distance
-      }))
-    };
-  }
-};
-
-export const Mutation = {
-  async createEvent(_, { request }, { connectors }) {
-    const { PostcodeConnector, EventConnector } = connectors;
-    const location = await PostcodeConnector.getById(request.postcode);
-
-    if (!location) {
-      throw new Error("Invalid postcode");
+  Mutation: {
+    async createEvent(_, { request }, context) {
+      return {
+        event: await Event.create(request, context)
+      };
     }
+  },
 
-    const event = {
-      ...request,
-      id: uuid(),
-      location,
-      startDate: new Date(request.startDate),
-      endDate: new Date(request.endDate)
-    };
-
-    await EventConnector.create({ event });
-
-    return {
-      event: event.id
-    };
-  }
+  Event: resolversForNode(Event)
 };
-
-export const Event = {
-  id: nodeID(),
-  title: getProperty({ connector: "EventConnector" }),
-  organiser: getProperty({ connector: "EventConnector" }),
-  startDate: getProperty({
-    connector: "EventConnector",
-    transform: toISOString
-  }),
-  endDate: getProperty({ connector: "EventConnector", transform: toISOString }),
-  shortDescription: getProperty({
-    connector: "EventConnector",
-    fromKey: "description",
-    transform: trimLength(255)
-  }),
-  longDescription: getProperty({
-    connector: "EventConnector",
-    fromKey: "description"
-  }),
-  address: getProperty({ connector: "EventConnector" }),
-  postcode: getProperty({ connector: "EventConnector" }),
-  extraInformation: getProperty({ connector: "EventConnector" }),
-  suitabilityInformation: getProperty({ connector: "EventConnector" })
-};
-
-function trimLength(length) {
-  return x => x.substr(0, length);
-}
-
-function toISOString(date) {
-  return date.toISOString();
-}
