@@ -6,7 +6,8 @@
   "scripts": {
     "start": "../../node_modules/.bin/nodemon devserver",
     "build": "../../node_modules/.bin/babel src --out-dir .build",
-    "test": "jest"
+    "test": "jest /src/",
+    "test:integration": "jest --forceExit"
   },
   "dependencies": {
     "accelerate-authentication": "file:../authentication",
