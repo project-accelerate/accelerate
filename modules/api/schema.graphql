@@ -6,52 +6,109 @@ interface Node {
 }
 
 type Query {
-  event(id: ID!): Event
-  eventFeed(postcode: String!, distanceInKM: Float!, cursor: String): EventFeed!
-  
+  # Get any Node (any type inheriting the Node interface) by ID.
   node(id: ID!): Node
+
+  # Get an Event by ID
+  event(id: ID!): Event
+
+  # Get a feed of events.
+  # Will return all events within the provided distance of the postcode.
+  # Events are ordered by start date, soonest first.
+  eventFeed(postcode: String!, distanceInKM: Float!, cursor: String): EventFeed!
 }
 
 type Mutation {
+  # Create a new event.
   createEvent(request: CreateEvent): CreateEventResponse
 }
 
+# Data required to create a new Event.
 input CreateEvent {
+  # Title of the event
   title: String!
+
+  # Name of the event organiser
   organiser: String!
+
+  # Start date/time of the event as ISO date string
   startDate: String!
+
+  # End date/time of the event as ISO date string
   endDate: String!
+  
+  # Long description of the event
   description: String!
+
+  # Address of the venue
   address: String!
+
+  # Postcode of the venue
   postcode: String!
+
+  # Additional information about the event useful for attendees
+  # (how to find the venue, etc)
   extraInformation: String!
+
+  # Information indicating accessibility/suitability (TBC)
   suitabilityInformation: [String!]!
 }
 
+# Response object returned by a request to create a new event
 type CreateEventResponse {
+  # The created event
   event: Event
 }
 
+# Edge relationship to a feed of events
 type EventFeed {
   edges: [EventFeedItem!]!
 }
 
+# Event in an an event feed
 type EventFeedItem {
+  # The event
   node: Event!
+
+  # Distance from the location of the user
   distance: Float!
+
+  # Cursor to the event (used to paginate the feed).
   cursor: String!
 }
 
+# Represent an event
 type Event implements Node {
+  # Unique ID of the event
   id: ID!
+
+  # Title of the event
   title: String!
+
+  # Name of the event organiser
   organiser: String!
+
+  # Start time/date of the event as an ISO date string
   startDate: String!
+
+  # End time/date of the event as an ISO date string
   endDate: String!
+
+  # Short description of the event (for display in a feed)
   shortDescription: String!
+
+  # Long description of the event (for display in detail)
   longDescription: String!
+
+  # Address of the event location
   address: String!
+
+  # Postcode of the event location
   postcode: String!
+
+  # Useful 'on the day' information, such as how to get in
   extraInformation: String!
+
+  # Information indicating accessibility/suitability (TBC)
   suitabilityInformation: [String!]!
 }
