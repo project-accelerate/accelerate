@@ -11,8 +11,8 @@ import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import { forEach, mapValues } from "lodash";
 import * as path from "path";
-import * as EventResolvers from "./resolvers/EventResolver";
-import EventConnector from "./connectors/EventConnector";
+import EventResolvers from "./resolvers/EventResolver";
+import EventTableConnector from "./connectors/EventTableConnector";
 import PostcodeConnector from "./connectors/PostcodeConnector";
 import { getNode } from "./lib/resolverUtils";
 
@@ -22,7 +22,7 @@ const typeDefs = fs.readFileSync(
 );
 
 const connectorClasses = {
-  EventConnector,
+  EventTableConnector,
   PostcodeConnector
 };
 

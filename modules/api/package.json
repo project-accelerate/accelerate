@@ -18,7 +18,9 @@
     "dataloader": "^1.4.0",
     "date-fns": "^1.29.0",
     "express": "^4.16.2",
-    "graphql-tools": "2.20",
+    "graphql": "^0.13.1",
+    "graphql-tools": "^2.20.0",
+    "invariant": "^2.2.3",
     "isomorphic-fetch": "^2.2.1",
     "knex": "^0.14.2",
     "knex-postgis": "^0.5.0",
@@ -29,7 +31,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "__tests__/lib/",
+      "lib/",
       "<rootDir>/coverage",
       "/.build",
       "node_modules"
@@ -42,7 +44,6 @@
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
     "faker": "^4.1.0",
-    "graphql": "^0.13.1",
     "jest": "^22.4.2"
   }
 }
