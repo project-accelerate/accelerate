@@ -10,8 +10,8 @@ import {
   toCamelCase,
   fromCamelCase,
   columnIsGreaterThan
-} from "../db";
-import { dataloaderResult } from "../utils";
+} from "../lib/db";
+import { dataloaderResult } from "../lib/connectorUtils";
 
 export default class EventConnector {
   /** Get a single event, or multiple events, by id */

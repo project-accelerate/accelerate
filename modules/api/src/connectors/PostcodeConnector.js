@@ -1,6 +1,6 @@
 import DataLoader from "dataloader";
 import fetch from "node-fetch";
-import { dataloaderResult } from "../utils";
+import { dataloaderResult } from "../lib/connectorUtils";
 
 const POSTCODES_API = "http://postcodes.io";
 
