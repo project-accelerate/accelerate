@@ -1,6 +1,6 @@
 import uuid from "uuid";
 import { nodeID, getProperty, getNode } from "../lib/resolverUtils";
-import { decodeCursor, encodeResultsPage } from "../lib/cursor";
+import { decodeCursor, encodeCursor } from "../lib/cursor";
 
 export const Query = {
   event: getNode(),
@@ -15,20 +15,21 @@ export const Query = {
     }
 
     const { startDate, startId } = decodeCursor(cursor, { defaultValue: {} });
-
     const events = await EventConnector.nearbyEvents({
       location,
       distanceInKM,
-      limit: limit + 1,
+      limit,
       startDate,
       startId
     });
 
-    return encodeResultsPage({
-      limit,
-      rows: events,
-      getCursor: ({ id, startDate: date }) => ({ startDate: date, startId: id })
-    });
+    return {
+      edges: events.map(event => ({
+        node: event.id,
+        cursor: encodeCursor({ startDate: event.startDate, startId: event.id }),
+        distance: event.distance
+      }))
+    };
   }
 };
 

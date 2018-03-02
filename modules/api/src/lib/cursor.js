@@ -1,21 +1,4 @@
 /**
- * Convert a list of result rows to a Relay-compatible cursor
- * (see: http://graphql.org/learn/pagination/#pagination-and-edges)
- */
-export function encodeResultsPage({ limit, rows, getCursor }) {
-  const nextRow = rows[limit];
-  const returnedRows = rows.slice(0, limit);
-
-  return {
-    nextCursor: nextRow && encodeCursor(getCursor(nextRow)),
-    edges: returnedRows.map(row => ({
-      cursor: encodeCursor(getCursor(row)),
-      node: row.id
-    }))
-  };
-}
-
-/**
  * Encode a JSON object representing a cursor as an opaque string
  * (see: http://graphql.org/learn/pagination/#pagination-and-edges)
  */
