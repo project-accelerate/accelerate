@@ -1,4 +1,5 @@
 import uuid from "uuid";
+import { log } from "../lib/logger";
 import {
   db,
   gis,
@@ -16,6 +17,8 @@ import { createBatchingGetById } from "../lib/connectorUtils";
 export default class EventTableConnector {
   getById = createBatchingGetById({
     async loadResources(ids) {
+      log.debug("EventConnector.getById", ids);
+
       return db
         .select("*")
         .from("event")
@@ -25,7 +28,11 @@ export default class EventTableConnector {
   });
 
   /** Insert a new event into the database */
-  async create({ location, startDate, endDate, ...eventProps }) {
+  async create(props) {
+    log.debug("EventConnector.create", props);
+
+    const { location, startDate, endDate, ...eventProps } = props;
+
     const event = {
       ...eventProps,
       id: uuid(),
@@ -39,7 +46,11 @@ export default class EventTableConnector {
   }
 
   /** Get events near to a location */
-  nearbyEvents({ location, distanceInKM, startDate, startId, limit }) {
+  nearbyEvents(props) {
+    log.debug("EventConnector.create", props);
+
+    const { location, distanceInKM, startDate, startId, limit } = props;
+
     const distanceInMeters = distanceFrom("location", location);
 
     return db
