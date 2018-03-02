@@ -5,11 +5,16 @@ import { identity } from "lodash";
  * then returns a specified property from that resource, optionally transforming
  * it using a provided transform function.
  */
-export function getProperty({ connector, transform = identity, fromKey }) {
+export function getProperty({
+  connector: connectorName,
+  transform = identity,
+  fromKey
+}) {
   return (id, props, { connectors }, { fieldName }) => {
-    const { loader } = connectors[connector];
-    return loader
-      .load(id)
+    const connector = connectors[connectorName];
+
+    return connector
+      .getById(id)
       .then(result => result[fromKey || fieldName])
       .then(transform);
   };

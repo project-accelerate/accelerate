@@ -9,7 +9,7 @@ export const Query = {
     const limit = 10;
     const { EventConnector, PostcodeConnector } = connectors;
 
-    const location = await PostcodeConnector.loader.load(postcode);
+    const location = await PostcodeConnector.getById(postcode);
     if (!location) {
       throw new Error(`Invalid postcode: ${postcode}`);
     }
@@ -35,7 +35,7 @@ export const Query = {
 export const Mutation = {
   async createEvent(_, { request }, { connectors }) {
     const { PostcodeConnector, EventConnector } = connectors;
-    const location = await PostcodeConnector.loader.load(request.postcode);
+    const location = await PostcodeConnector.getById(request.postcode);
 
     if (!location) {
       throw new Error("Invalid postcode");
