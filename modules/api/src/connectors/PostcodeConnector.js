@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import { log } from "../lib/logger";
 import { createBatchingGetById } from "../lib/connectorUtils";
 
 const POSTCODES_API = "http://postcodes.io";
@@ -8,6 +9,8 @@ export default class PostcodeConnector {
     primaryKey: "postcode",
 
     async loadResources(postcodes) {
+      log.debug("PostcodeConnector.getById", postcodes);
+
       const response = await fetch(`${POSTCODES_API}/postcodes`, {
         method: "POST",
         headers: {
