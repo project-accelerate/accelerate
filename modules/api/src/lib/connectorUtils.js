@@ -1,16 +1,26 @@
-import { keyBy, iteratee } from "lodash";
+import { keyBy } from "lodash";
+import DataLoader from "dataloader";
 
 /**
- * Convert an array of result objects to the format expected by DataLoader
+ * Creates a getById method implementation for a resource connector where the
+ * resource is simply fetched by ID.
+ *
+ * This uses the DataLoader library to batch and de-duplicate requests for resources
+ * of the same type. It adds some conveniences to identify the returned resources with
+ * the requested resources (the DataLoader library uses position in the result array,
+ * which is really annoying to use).
  */
-export function dataloaderResult({
-  fromRows,
-  forKeys,
-  indexBy = "id",
-  valueFrom
-} = {}) {
-  const indexed = keyBy(fromRows, indexBy);
-  const getValue = iteratee(valueFrom);
+export function createBatchingGetById({ primaryKey = "id", loadResources }) {
+  const loader = new DataLoader(async ids => {
+    const results = await loadResources(ids);
 
-  return forKeys.map(id => getValue(indexed[id]));
+    if (Array.isArray(results)) {
+      const indexedResults = keyBy(results, primaryKey);
+      return ids.map(id => indexedResults[id]);
+    }
+
+    return ids.map(id => results[id]);
+  });
+
+  return id => loader.load(id);
 }

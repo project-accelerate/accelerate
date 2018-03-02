@@ -1,4 +1,3 @@
-import DataLoader from "dataloader";
 import {
   db,
   gis,
@@ -11,18 +10,17 @@ import {
   fromCamelCase,
   columnIsGreaterThan
 } from "../lib/db";
-import { dataloaderResult } from "../lib/connectorUtils";
+import { createBatchingGetById } from "../lib/connectorUtils";
 
 export default class EventConnector {
-  /** Get a single event, or multiple events, by id */
-  loader = new DataLoader(async keys => {
-    const rows = await db
-      .select("*")
-      .from("event")
-      .whereIn("id", keys)
-      .then(toCamelCase);
-
-    return dataloaderResult({ fromRows: rows, forKeys: keys });
+  getById = createBatchingGetById({
+    async loadResources(ids) {
+      return db
+        .select("*")
+        .from("event")
+        .whereIn("id", ids)
+        .then(toCamelCase);
+    }
   });
 
   /** Insert a new event into the database */
