@@ -10,7 +10,7 @@ export function encodeCursor(cursor) {
  * Decode an opaque cursor string, returning the JSON object it represents
  * (see: http://graphql.org/learn/pagination/#pagination-and-edges)
  */
-export function decodeCursor(cursor, { defaultValue } = {}) {
+export function decodeCursor(cursor, { defaultValue = {} } = {}) {
   return cursor
     ? JSON.parse(Buffer.from(cursor, "base64").toString("utf8"))
     : defaultValue;
