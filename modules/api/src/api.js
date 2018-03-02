@@ -14,7 +14,7 @@ import * as path from "path";
 import * as EventResolvers from "./resolvers/EventResolver";
 import EventConnector from "./connectors/EventConnector";
 import PostcodeConnector from "./connectors/PostcodeConnector";
-import { getNode } from "./utils";
+import { getNode } from "./lib/resolverUtils";
 
 const typeDefs = fs.readFileSync(
   path.join(__dirname, "..", "schema.graphql"),

@@ -1,11 +1,6 @@
 import uuid from "uuid";
-import {
-  nodeID,
-  getProperty,
-  decodeCursor,
-  encodeResultsPage,
-  getNode
-} from "../utils";
+import { nodeID, getProperty, getNode } from "../lib/resolverUtils";
+import { decodeCursor, encodeResultsPage } from "../lib/cursor";
 
 export const Query = {
   event: getNode(),
