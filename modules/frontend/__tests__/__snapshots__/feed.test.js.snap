@@ -74,13 +74,12 @@ exports[`/feed should display with events in feed 1`] = `
     </div>
   </section>
   <h3
-    className="MuiTypography-root-68 MuiTypography-body1-77"
+    className="MuiTypography-root-68 MuiTypography-headline-73"
     style={
       Object {
         "margin": "1rem",
       }
     }
-    type="headline"
   >
     Happening Soon
   </h3>
@@ -97,35 +96,32 @@ exports[`/feed should display with events in feed 1`] = `
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           harum sit odio
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           quos est quod
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           05754 Stanton Point
           , 
@@ -191,35 +187,32 @@ Voluptates iste eius iure commodi molestiae at voluptas. Ex reprehenderit ipsa i
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           doloribus expedita et
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           exercitationem voluptatibus error
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           2524 Turcotte Mount
           , 
@@ -285,35 +278,32 @@ Rem cumque quia delectus perspiciatis sunt. Inventore et officia. Facere assumen
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           voluptatibus vel ut
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           iusto autem beatae
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           6501 Yadira Meadow
           , 
@@ -379,35 +369,32 @@ Recusandae quos officia. Hic necessitatibus iste. Et harum alias sit deleniti. M
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           quam voluptas esse
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           et nihil quo
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           787 Williamson Road
           , 
@@ -473,35 +460,32 @@ Commodi sit eos corporis molestias atque exercitationem molestiae hic ratione. S
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           velit corrupti distinctio
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           nesciunt impedit voluptates
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           9020 Albertha Branch
           , 
@@ -567,35 +551,32 @@ Distinctio autem vel minima dolores est error perferendis qui doloremque. Illo d
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           ad quos molestias
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           et accusamus rerum
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           8382 Freida Turnpike
           , 
@@ -661,35 +642,32 @@ Facilis tenetur et. Et dolorem in quia minima expedita porro voluptas facilis. D
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           at laboriosam architecto
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           dicta eius quod
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           447 Zella Track
           , 
@@ -755,35 +733,32 @@ Accusantium itaque dignissimos modi asperiores tempora laboriosam at. Eum sequi 
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           eaque est voluptatem
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           atque sunt eius
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           9139 Keeling Skyway
           , 
@@ -849,35 +824,32 @@ Voluptas quia nemo vel facere. Possimus animi porro ea aut asperiores sint. Iste
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           accusamus praesentium occaecati
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           sit occaecati dolore
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           367 Nicholaus Turnpike
           , 
@@ -943,35 +915,32 @@ Consequatur laudantium minima. Omnis ut ipsam. Dolorem harum sint voluptatem. El
         className="MuiCardContent-root-92"
       >
         <h3
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-title-74"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="title"
         >
           ducimus corrupti officiis
         </h3>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           qui vel repellendus
         </p>
         <p
-          className="MuiTypography-root-68 MuiTypography-body1-77"
+          className="MuiTypography-root-68 MuiTypography-subheading-75"
           style={
             Object {
               "marginBottom": "1rem",
             }
           }
-          type="subheading"
         >
           3708 Zoie Loaf
           , 
@@ -1103,13 +1072,12 @@ exports[`/feed should display with no events in feed 1`] = `
     </div>
   </section>
   <h3
-    className="MuiTypography-root-162 MuiTypography-body1-171"
+    className="MuiTypography-root-162 MuiTypography-headline-167"
     style={
       Object {
         "margin": "1rem",
       }
     }
-    type="headline"
   >
     Happening Soon
   </h3>
