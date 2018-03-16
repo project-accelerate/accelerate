@@ -57,6 +57,9 @@
     "start": "node devserver"
   },
   "jest": {
+    "testPathIgnorePatterns": [
+      "/.build"
+    ],
     "setupFiles": [
       "./testSetup.js"
     ],
