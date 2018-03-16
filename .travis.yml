@@ -7,7 +7,11 @@ cache:
   directories:
     - "node_modules"
 services:
-  - postgresql
+  - docker
+before_install:
+  - docker run -d -p 54321:5432 mdillon/postgis
+env:
+  - DATABASE_URL="postgres://postgres@localhost:54321/postgres"
 script:
   - yarn test --integration --submitCoverage
   - yarn lint
