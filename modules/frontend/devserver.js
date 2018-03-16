@@ -12,17 +12,19 @@ const proxy = require("express-http-proxy");
 const url = require("url");
 const { withUser } = require("accelerate-authentication");
 const cookieParser = require("cookie-parser");
-const { frontend, render } = require("./index");
+const { createFrontend } = require("./");
 const { compileRelay } = require("./scripts/tasks");
 
 // Start the relay compiler in watch mode
 compileRelay({ watch: true });
 
-frontend.prepare().then(() => {
-  const server = express();
+const { server, render } = createFrontend();
+
+server.prepare().then(() => {
+  const app = express();
 
   // Stub out the geoip location, as localhost won't work.
-  server.use((req, res, next) => {
+  app.use((req, res, next) => {
     req.geolocation = getDebugGeolocation();
     next();
   });

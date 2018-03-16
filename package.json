@@ -17,7 +17,8 @@
     "pretty": "prettier --ignore-path .gitignore --write --tab-width 2 \"**/*.js\"",
     "postinstall": "node scripts/bootstrap",
     "precommit": "lint-staged && yarn test",
-    "test": "node scripts/test"
+    "test": "node scripts/test",
+    "e2e": "yarn db:init-dev && node scripts/e2e"
   },
   "devDependencies": {
     "codecov": "^3.0.0",

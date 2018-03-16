@@ -85,7 +85,7 @@ exports[`/feed should display with events in feed 1`] = `
   </h3>
   <div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -147,7 +147,7 @@ Voluptates iste eius iure commodi molestiae at voluptas. Ex reprehenderit ipsa i
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -176,7 +176,7 @@ Voluptates iste eius iure commodi molestiae at voluptas. Ex reprehenderit ipsa i
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -238,7 +238,7 @@ Rem cumque quia delectus perspiciatis sunt. Inventore et officia. Facere assumen
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -267,7 +267,7 @@ Rem cumque quia delectus perspiciatis sunt. Inventore et officia. Facere assumen
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -329,7 +329,7 @@ Recusandae quos officia. Hic necessitatibus iste. Et harum alias sit deleniti. M
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -358,7 +358,7 @@ Recusandae quos officia. Hic necessitatibus iste. Et harum alias sit deleniti. M
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -420,7 +420,7 @@ Commodi sit eos corporis molestias atque exercitationem molestiae hic ratione. S
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -449,7 +449,7 @@ Commodi sit eos corporis molestias atque exercitationem molestiae hic ratione. S
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -511,7 +511,7 @@ Distinctio autem vel minima dolores est error perferendis qui doloremque. Illo d
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -540,7 +540,7 @@ Distinctio autem vel minima dolores est error perferendis qui doloremque. Illo d
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -602,7 +602,7 @@ Facilis tenetur et. Et dolorem in quia minima expedita porro voluptas facilis. D
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -631,7 +631,7 @@ Facilis tenetur et. Et dolorem in quia minima expedita porro voluptas facilis. D
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -693,7 +693,7 @@ Accusantium itaque dignissimos modi asperiores tempora laboriosam at. Eum sequi 
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -722,7 +722,7 @@ Accusantium itaque dignissimos modi asperiores tempora laboriosam at. Eum sequi 
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -784,7 +784,7 @@ Voluptas quia nemo vel facere. Possimus animi porro ea aut asperiores sint. Iste
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -813,7 +813,7 @@ Voluptas quia nemo vel facere. Possimus animi porro ea aut asperiores sint. Iste
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -875,7 +875,7 @@ Consequatur laudantium minima. Omnis ut ipsam. Dolorem harum sint voluptatem. El
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}
@@ -904,7 +904,7 @@ Consequatur laudantium minima. Omnis ut ipsam. Dolorem harum sint voluptatem. El
       </div>
     </div>
     <div
-      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18"
+      className="MuiPaper-root-17 MuiPaper-elevation2-21 MuiPaper-rounded-18 event-feed-item"
       style={
         Object {
           "marginBottom": "1rem",
@@ -966,7 +966,7 @@ Sint esse illo et ab fuga soluta qui illo. Occaecati ea ut harum amet officia su
         className="MuiCardActions-root-94"
       >
         <button
-          className="MuiButtonBase-root-59 MuiButton-root-44"
+          className="MuiButtonBase-root-59 MuiButton-root-44 event-more-info"
           dense={true}
           disabled={false}
           onBlur={[Function]}

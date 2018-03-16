@@ -5,8 +5,5 @@ import { pageUrl } from "../lib/pageUrl";
 
 fixture("/feed").page(pageUrl("/feed"));
 
-test("Should display events", async t => {
-  const eventItem = Selector(".event");
-
-  await t.expect(eventItem.exists).ok();
-});
+test("Should display at least one event", t =>
+  t.expect(Selector(".event-feed-item").exists).ok());

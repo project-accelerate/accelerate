@@ -13,5 +13,6 @@ before_install:
 env:
   - DATABASE_URL="postgres://postgres@localhost:54321/postgres"
 script:
+  - yarn e2e
   - yarn test --integration --submitCoverage
   - yarn lint
