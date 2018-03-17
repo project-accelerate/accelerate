@@ -7,10 +7,12 @@ import { createContext, createSchema } from "../../src/api";
  * Execute a query against an the-process GraphQl API and return the query result,
  * or raise an exception if the query fails
  */
-export async function fetchQuery({ query, variables }) {
+export async function fetchQuery({ query, variables, user }) {
   const result = await execute({
     schema: createSchema(),
-    contextValue: createContext(),
+    contextValue: createContext({
+      user
+    }),
     document: parse(query),
     variableValues: variables
   });
