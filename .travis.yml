@@ -8,10 +8,24 @@ cache:
     - "node_modules"
 services:
   - docker
+addons:
+  firefox: latest
+  apt:
+    sources:
+     - google-chrome
+    packages:
+     - google-chrome-stable fluxbox
 before_install:
   - docker run -d -p 54321:5432 mdillon/postgis
+  - stty cols 80
 env:
   - DATABASE_URL="postgres://postgres@localhost:54321/postgres"
+before_script:
+  # Required by testcafe
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
+  - fluxbox >/dev/null 2>&1 &
 script:
   - yarn e2e
   - yarn test --integration --submitCoverage
