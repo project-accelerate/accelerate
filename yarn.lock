@@ -3190,9 +3190,9 @@ knex-migrate@^1.5.1:
     req-from "^1.0.1"
     umzug "^1.11.0"
 
-knex-postgis@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/knex-postgis/-/knex-postgis-0.5.0.tgz#763ba72b293954874d54b80df7b5635436e7aecf"
+knex-postgis@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/knex-postgis/-/knex-postgis-0.6.0.tgz#a7548d7aef685e4f08118686e17a4977d1c2a308"
   dependencies:
     "@mapbox/geojsonhint" "^2.0.1"
 
