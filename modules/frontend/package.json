@@ -27,7 +27,7 @@
     "react-relay": "^1.4.1",
     "recompose": "^0.26.0",
     "relay-context-provider": "^1.0.4",
-    "relay-query-lookup-renderer": "^2.0.2",
+    "relay-query-lookup-renderer": "^3.0.1",
     "relay-runtime": "^1.4.1",
     "serialize-javascript": "^1.4.0"
   },

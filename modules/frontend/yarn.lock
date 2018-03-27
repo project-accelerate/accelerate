@@ -723,7 +723,7 @@ accelerate-api-interface@../api-interface:
 accelerate-api@../api:
   version "0.0.0"
   dependencies:
-    accelerate-authentication "file:../../../../.cache/yarn/v1/authentication"
+    accelerate-authentication "file:../../../home/app/.cache/yarn/v1/authentication"
     apollo-server-express "^1.3.2"
     body-parser "^1.18.2"
     cookie-parser "^1.4.3"
@@ -8265,9 +8265,9 @@ relay-mock-network-layer@^1.2.0:
   dependencies:
     graphql-tools "^1.2.1"
 
-relay-query-lookup-renderer@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/relay-query-lookup-renderer/-/relay-query-lookup-renderer-2.0.4.tgz#10cbafdd8ff7e9eccabe77396d1bce237fc58b20"
+relay-query-lookup-renderer@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/relay-query-lookup-renderer/-/relay-query-lookup-renderer-3.0.1.tgz#792bf8fda9901d25a782b8845c72b0b58a88c25b"
   dependencies:
     deep-freeze "^0.0.1"
     fbjs "^0.8.1"
