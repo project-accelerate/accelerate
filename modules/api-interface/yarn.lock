@@ -81,7 +81,7 @@
 accelerate-api@../api:
   version "0.0.0"
   dependencies:
-    accelerate-authentication "file:../../../../.cache/yarn/v1/authentication"
+    accelerate-authentication "file:../../../home/app/.cache/yarn/v1/authentication"
     apollo-server-express "^1.3.2"
     body-parser "^1.18.2"
     cookie-parser "^1.4.3"
@@ -1798,13 +1798,11 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     extend-shallow "^3.0.2"
     safe-regex "^1.1.0"
 
-relay-local-schema@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/relay-local-schema/-/relay-local-schema-0.6.2.tgz#e2211fd0d60c896f43f54acc854dc5c42ee227b6"
-  dependencies:
-    relay-runtime "^1.0.0"
+relay-local-schema@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/relay-local-schema/-/relay-local-schema-0.7.0.tgz#a27c7170c6148b916ed0f84d6c30009ba332a0e4"
 
-relay-runtime@^1.0.0, relay-runtime@^1.4.1:
+relay-runtime@^1.4.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-1.5.0.tgz#95e7c26f95f216370f7d699290238a4d966a915c"
   dependencies:
