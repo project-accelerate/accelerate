@@ -2,10 +2,9 @@ import * as React from "react";
 import { graphql } from "react-relay";
 import PropTypes from "prop-types";
 import { format } from "date-fns";
-import Typography from "material-ui/Typography/Typography";
+import Typography from "material-ui/Typography";
 import withStyles from "material-ui/styles/withStyles";
-import Card from "material-ui/Card/Card";
-import CardContent from "material-ui/Card/CardContent";
+import Card, { CardContent } from "material-ui/Card";
 import { compose } from "recompose";
 import { pageRoot } from "../lib/page/page";
 
@@ -25,16 +24,20 @@ function EventPage({ event, classes }) {
   return (
     <Card>
       <CardContent>
-        <Typography className={classes.heading} type="headline" component="h1">
+        <Typography
+          className={classes.heading}
+          variant="headline"
+          component="h1"
+        >
           {event.title}
         </Typography>
-        <Typography className={classes.heading} type="body1" component="h2">
+        <Typography className={classes.heading} variant="body1" component="h2">
           Organised by <strong>{event.organiser}</strong>
         </Typography>
-        <Typography className={classes.heading} type="body1" component="h3">
+        <Typography className={classes.heading} variant="body1" component="h3">
           {getTimings(event)}
         </Typography>
-        <Typography className={classes.heading} type="body1" component="p">
+        <Typography className={classes.heading} variant="body1" component="p">
           {event.address.split(`\n`).map(line => (
             <span>
               {line}
@@ -47,7 +50,7 @@ function EventPage({ event, classes }) {
           {event.longDescription.split("\n").map(paragraph => (
             <Typography
               className={classes.paragraph}
-              type="body2"
+              variant="body2"
               component="p"
             >
               {paragraph}

@@ -53,7 +53,7 @@ export default class EventSearchDialog extends React.Component {
             <TextField
               defaultValue={this.props.defaultValue}
               id="postcode"
-              type="text"
+              variant="text"
               fullWidth
             />
           </DialogContent>

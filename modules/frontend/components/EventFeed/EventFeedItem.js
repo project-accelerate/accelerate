@@ -17,21 +17,21 @@ export function EventFeedItemView({ event }) {
     <Card style={{ marginBottom: "1rem" }}>
       <CardContent>
         <Typography
-          type="title"
+          variant="title"
           component="h3"
           style={{ marginBottom: "1rem" }}
         >
           {event.title}
         </Typography>
         <Typography
-          type="subheading"
+          variant="subheading"
           component="p"
           style={{ marginBottom: "1rem" }}
         >
           {event.organiser}
         </Typography>
         <Typography
-          type="subheading"
+          variant="subheading"
           component="p"
           style={{ marginBottom: "1rem" }}
         >
