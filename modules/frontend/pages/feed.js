@@ -59,7 +59,7 @@ function FeedPage({
           </Paper>
         }
       />
-      <Typography type="headline" component="h3" style={{ margin: "1rem" }}>
+      <Typography variant="headline" component="h3" style={{ margin: "1rem" }}>
         Happening Soon
       </Typography>
       <EventFeed events={eventFeed} />
