@@ -6,7 +6,7 @@
     "accelerate-api": "../api",
     "accelerate-api-interface": "../api-interface",
     "accelerate-authentication": "file:../authentication",
-    "async-wait-until": "^1.1.5",
+    "async-wait-until": "^1.1.7",
     "browser-cookies": "^1.2.0",
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",
