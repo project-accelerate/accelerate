@@ -19,7 +19,9 @@ before_install:
   - docker run -d -p 54321:5432 mdillon/postgis
   - stty cols 80
 env:
-  - DATABASE_URL="postgres://postgres@localhost:54321/postgres"
+  global:
+    - DATABASE_URL="postgres://postgres@localhost:54321/postgres"
+    - E2E_TEST_BROWSERS="chrome,firefox"
 before_script:
   # Required by testcafe
   - "export DISPLAY=:99.0"

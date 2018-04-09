@@ -7,6 +7,7 @@ bootstrapModule("authentication");
 bootstrapModule("api");
 bootstrapModule("api-interface");
 bootstrapModule("frontend");
+bootstrapModule("e2e-tests");
 
 /**
  * Install the module's dependencies and run its build script
