@@ -4,7 +4,7 @@ import { MuiThemeProvider } from "material-ui/styles";
 import Reboot from "material-ui/Reboot";
 import getPageContext from "./getPageContext";
 
-function withRoot(Component) {
+function withMaterialUI(Component) {
   class WithRoot extends React.Component {
     componentWillMount() {
       this.pageContext = this.props.pageContext || getPageContext();
@@ -54,4 +54,4 @@ function withRoot(Component) {
   return WithRoot;
 }
 
-export default withRoot;
+export default withMaterialUI;

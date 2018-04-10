@@ -1,0 +1,40 @@
+{
+  "name": "accelerate-authentication",
+  "version": "1.0.0",
+  "description": "Authentication middleware for accelerate app",
+  "main": ".build/index.js",
+  "browser": ".build/browser.js",
+  "scripts": {
+    "build": "../../node_modules/.bin/babel src --out-dir .build",
+    "test": "../../node_modules/.bin/jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.188.0",
+    "compose-middleware": "^4.0.0",
+    "env-var": "^3.1.0",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "jsonwebtoken": "^8.1.1",
+    "jwks-rsa": "^1.2.1"
+  },
+  "devDependencies": {
+    "cookie": "^0.3.1",
+    "dotenv": "^5.0.0",
+    "mock-express-request": "^0.2.2",
+    "mock-express-response": "^0.2.2",
+    "uuid": "^3.2.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/getAuthConfig.js$"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.build/"
+    ]
+  }
+}

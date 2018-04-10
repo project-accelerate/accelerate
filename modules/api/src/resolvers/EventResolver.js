@@ -1,11 +1,6 @@
 import uuid from "uuid";
-import {
-  nodeID,
-  getProperty,
-  decodeCursor,
-  encodeResultsPage,
-  getNode
-} from "../utils";
+import { nodeID, getProperty, getNode } from "../lib/resolverUtils";
+import { decodeCursor, encodeCursor } from "../lib/cursor";
 
 export const Query = {
   event: getNode(),
@@ -14,33 +9,34 @@ export const Query = {
     const limit = 10;
     const { EventConnector, PostcodeConnector } = connectors;
 
-    const location = await PostcodeConnector.loader.load(postcode);
+    const location = await PostcodeConnector.getById(postcode);
     if (!location) {
       throw new Error(`Invalid postcode: ${postcode}`);
     }
 
     const { startDate, startId } = decodeCursor(cursor, { defaultValue: {} });
-
     const events = await EventConnector.nearbyEvents({
       location,
       distanceInKM,
-      limit: limit + 1,
+      limit,
       startDate,
       startId
     });
 
-    return encodeResultsPage({
-      limit,
-      rows: events,
-      getCursor: (id, date) => ({ startDate: date, startId: id })
-    });
+    return {
+      edges: events.map(event => ({
+        node: event.id,
+        cursor: encodeCursor({ startDate: event.startDate, startId: event.id }),
+        distance: event.distance
+      }))
+    };
   }
 };
 
 export const Mutation = {
   async createEvent(_, { request }, { connectors }) {
     const { PostcodeConnector, EventConnector } = connectors;
-    const location = await PostcodeConnector.loader.load(request.postcode);
+    const location = await PostcodeConnector.getById(request.postcode);
 
     if (!location) {
       throw new Error("Invalid postcode");
@@ -54,7 +50,7 @@ export const Mutation = {
       endDate: new Date(request.endDate)
     };
 
-    await EventConnector.create(event);
+    await EventConnector.create({ event });
 
     return {
       event: event.id

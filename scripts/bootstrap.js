@@ -3,6 +3,7 @@ const path = require("path");
 
 // Ordering matters here!
 // If module A is a dependency of module B, A must appear after B
+bootstrapModule("authentication");
 bootstrapModule("api");
 bootstrapModule("api-interface");
 bootstrapModule("frontend");

@@ -1,31 +1,35 @@
-import DataLoader from "dataloader";
 import {
   db,
-  isGreaterThan,
+  gis,
   isLessThan,
   distanceFrom,
   pair,
   sortColumn,
   sortClauses,
   toCamelCase,
-  fromCamelCase
-} from "../db";
-import { dataloaderResult } from "../utils";
+  fromCamelCase,
+  columnIsGreaterThan
+} from "../lib/db";
+import { createBatchingGetById } from "../lib/connectorUtils";
 
 export default class EventConnector {
-  /** Get a single event, or multiple events, by id */
-  loader = new DataLoader(async keys => {
-    const rows = await db
-      .select("*")
-      .from("event")
-      .whereIn("id", keys)
-      .then(toCamelCase);
-
-    return dataloaderResult({ fromRows: rows, forKeys: keys });
+  getById = createBatchingGetById({
+    async loadResources(ids) {
+      return db
+        .select("*")
+        .from("event")
+        .whereIn("id", ids)
+        .then(toCamelCase);
+    }
   });
 
   /** Insert a new event into the database */
-  async create(_, { event }) {
+  async create({ event: { location, ...eventProps } }) {
+    const event = {
+      ...eventProps,
+      location: gis.makePoint(location.longitude, location.latitude)
+    };
+
     await db("event").insert([fromCamelCase(event)]);
   }
 
@@ -40,8 +44,8 @@ export default class EventConnector {
       .modify(q => {
         if (startDate && startId) {
           q.andWhere(
-            isGreaterThan(
-              pair("start_date", "id"),
+            columnIsGreaterThan(
+              "(start_date, id)",
               pair(new Date(startDate), startId)
             )
           );

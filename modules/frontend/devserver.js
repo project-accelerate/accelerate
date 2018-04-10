@@ -8,6 +8,10 @@ require("dotenv").config({
 
 require("babel-polyfill");
 const express = require("express");
+const proxy = require("express-http-proxy");
+const url = require("url");
+const { withUser } = require("accelerate-authentication");
+const cookieParser = require("cookie-parser");
 const { frontend, render } = require("./index");
 const { compileRelay } = require("./scripts/tasks");
 
@@ -23,9 +27,17 @@ frontend.prepare().then(() => {
     next();
   });
 
-  server.get("*", render);
+  server.post("/login", proxyToBackend());
+  server.post("/graphql", proxyToBackend());
+  server.get("*", cookieParser(), withUser(), render);
+
   server.listen(process.env.PORT);
 });
+
+function proxyToBackend() {
+  const { host, protocol } = url.parse(process.env.BACKEND_URL);
+  return proxy(host, { https: protocol === "https:" });
+}
 
 /**
  * Get lat/long coordinates from the environment.

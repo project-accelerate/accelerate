@@ -1,7 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 import fs from "fs";
-import cors from "cors";
+import {
+  withUser,
+  loginEndpoint,
+  authDirectives
+} from "accelerate-authentication";
 import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import { forEach, mapValues } from "lodash";
@@ -9,7 +14,7 @@ import * as path from "path";
 import * as EventResolvers from "./resolvers/EventResolver";
 import EventConnector from "./connectors/EventConnector";
 import PostcodeConnector from "./connectors/PostcodeConnector";
-import { getNode } from "./utils";
+import { getNode } from "./lib/resolverUtils";
 
 const typeDefs = fs.readFileSync(
   path.join(__dirname, "..", "schema.graphql"),
@@ -26,13 +31,15 @@ const resolverModules = [EventResolvers];
 export function createSchema() {
   return makeExecutableSchema({
     typeDefs,
-    resolvers: mergeTypeResolvers(resolverModules)
+    resolvers: mergeTypeResolvers(resolverModules),
+    directiveResolvers: authDirectives
   });
 }
 
-export function createContext() {
+export function createContext(req) {
   return {
-    connectors: mapValues(connectorClasses, C => new C())
+    connectors: mapValues(connectorClasses, C => new C()),
+    user: req.user
   };
 }
 
@@ -43,15 +50,16 @@ export function createBackend() {
     app.get("/graphql-ui", graphiqlExpress({ endpointURL: "/graphql" }));
   }
 
-  app.options("/graphql", cors());
+  app.post("/login", bodyParser.json(), loginEndpoint());
 
   app.post(
     "/graphql",
-    cors(),
+    cookieParser(),
+    withUser(),
     bodyParser.json(),
-    graphqlExpress(() => ({
+    graphqlExpress(req => ({
       schema: createSchema(),
-      context: createContext()
+      context: createContext(req)
     }))
   );
 

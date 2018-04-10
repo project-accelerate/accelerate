@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/login should match snapshot 1`] = `
+<form
+  method="none"
+  onSubmit={[Function]}
+>
+  <div
+    aria-describedby={undefined}
+    className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    variant="email"
+  >
+    <label
+      className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+      data-shrink={false}
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <div
+      className="MuiInput-root-15 MuiInput-fullWidth-23 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        aria-required={false}
+        autoComplete="email"
+        autoFocus={undefined}
+        className="MuiInput-input-24"
+        defaultValue={undefined}
+        disabled={false}
+        id="email"
+        name={undefined}
+        onChange={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder={undefined}
+        readOnly={undefined}
+        required={undefined}
+        rows={undefined}
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    aria-describedby={undefined}
+    className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    variant="password"
+  >
+    <label
+      className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+      data-shrink={false}
+      htmlFor="password"
+    >
+      Password
+    </label>
+    <div
+      className="MuiInput-root-15 MuiInput-fullWidth-23 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        aria-required={false}
+        autoComplete="current-password"
+        autoFocus={undefined}
+        className="MuiInput-input-24 MuiInput-inputType-27"
+        defaultValue={undefined}
+        disabled={false}
+        id="password"
+        name={undefined}
+        onChange={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder={undefined}
+        readOnly={undefined}
+        required={undefined}
+        rows={undefined}
+        type="password"
+        value=""
+      />
+    </div>
+  </div>
+  <button
+    className="MuiButtonBase-root-45 MuiButtonBase-disabled-46 MuiButton-root-30 MuiButton-disabled-39"
+    disabled={true}
+    id="submit"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={-1}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-31"
+    >
+      Log In
+    </span>
+  </button>
+</form>
+`;
