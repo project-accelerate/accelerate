@@ -1,5 +1,5 @@
 import React from "react";
-import { isLoggedIn } from "accelerate-authentication";
+import { isLoggedIn } from "@accelerate/authentication";
 import { compose } from "recompose";
 import { pageRoot } from "../lib/page/page";
 

@@ -1,7 +1,7 @@
 const { execSync, spawnSync } = require("child_process");
 const { isString } = require("util");
 
-const SCHEMA_PATH = require.resolve("accelerate-api/schema.graphql");
+const SCHEMA_PATH = require.resolve("@accelerate/api/schema.graphql");
 
 exports.compileRelay = function compileRelay({ watch }) {
   const command = [

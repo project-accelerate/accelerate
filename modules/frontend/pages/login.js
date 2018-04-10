@@ -4,7 +4,7 @@ import { compose } from "recompose";
 import Router from "next/router";
 import TextField from "material-ui/TextField";
 import Button from "material-ui/Button";
-import { isLoggedOut } from "accelerate-authentication";
+import { isLoggedOut } from "@accelerate/authentication";
 import CircularProgress from "material-ui/Progress/CircularProgress";
 import { actions } from "../lib/action";
 import { loginUser } from "../lib/loginUser";

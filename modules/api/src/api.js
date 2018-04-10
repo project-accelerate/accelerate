@@ -6,7 +6,7 @@ import {
   withUser,
   loginEndpoint,
   authDirectives
-} from "accelerate-authentication";
+} from "@accelerate/authentication";
 import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import { forEach, mapValues } from "lodash";

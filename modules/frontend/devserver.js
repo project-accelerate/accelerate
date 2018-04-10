@@ -10,7 +10,7 @@ require("babel-polyfill");
 const express = require("express");
 const proxy = require("express-http-proxy");
 const url = require("url");
-const { withUser } = require("accelerate-authentication");
+const { withUser } = require("@accelerate/authentication");
 const cookieParser = require("cookie-parser");
 const { createFrontend } = require("./");
 const { compileRelay } = require("./scripts/tasks");
@@ -18,7 +18,9 @@ const { compileRelay } = require("./scripts/tasks");
 // Start the relay compiler in watch mode
 compileRelay({ watch: true });
 
-const { server, render } = createFrontend();
+const { server, render } = createFrontend({
+  dev: true
+});
 
 server.prepare().then(() => {
   const app = express();
@@ -29,11 +31,11 @@ server.prepare().then(() => {
     next();
   });
 
-  server.post("/login", proxyToBackend());
-  server.post("/graphql", proxyToBackend());
-  server.get("*", cookieParser(), withUser(), render);
+  app.post("/login", proxyToBackend());
+  app.post("/graphql", proxyToBackend());
+  app.get("*", cookieParser(), withUser(), render);
 
-  server.listen(process.env.PORT);
+  app.listen(process.env.PORT);
 });
 
 function proxyToBackend() {

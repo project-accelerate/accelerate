@@ -29,6 +29,7 @@ before_script:
   - sleep 3
   - fluxbox >/dev/null 2>&1 &
 script:
-  - yarn e2e
+  - yarn build
   - yarn test --integration --submitCoverage
   - yarn lint
+  - yarn e2e

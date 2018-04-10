@@ -1,5 +1,5 @@
 {
-  "name": "accelerate-authentication",
+  "name": "@accelerate/authentication",
   "version": "1.0.0",
   "description": "Authentication middleware for accelerate app",
   "main": ".build/index.js",

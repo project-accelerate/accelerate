@@ -1,12 +1,11 @@
 {
-  "name": "accelerate-e2e-tests",
+  "name": "@accelerate/e2e-tests",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "node run",
-    "build": "true"
+    "test": "node run"
   },
   "dependencies": {
     "dotenv": "^5.0.1",

@@ -3,7 +3,7 @@ import { fetchQuery } from "react-relay";
 import { wrapDisplayName } from "recompose";
 import PropTypes from "prop-types";
 import RelayContextProvider from "relay-context-provider";
-import createEnvironment from "accelerate-api-interface";
+import createEnvironment from "@accelerate/api-interface";
 import { BACKEND_URL } from "../config";
 
 /**

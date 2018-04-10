@@ -1,6 +1,6 @@
 import { Environment, Store, Network, RecordSource } from "relay-runtime";
 import { Network as LocalLink } from "relay-local-schema";
-import { createSchema, createContext } from "accelerate-api";
+import { createSchema, createContext } from "@accelerate/api";
 import { fetchQuery } from "./fetchQuery";
 
 // Server Relay environment created per-request (not cached)

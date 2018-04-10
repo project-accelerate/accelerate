@@ -1,11 +1,11 @@
 {
-  "name": "accelerate-frontend",
+  "name": "@accelerate/frontend",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "accelerate-api": "../api",
-    "accelerate-api-interface": "../api-interface",
-    "accelerate-authentication": "file:../authentication",
+    "@accelerate/api": "*",
+    "@accelerate/api-interface": "*",
+    "@accelerate/authentication": "*",
     "async-wait-until": "^1.1.5",
     "browser-cookies": "^1.2.0",
     "classnames": "^2.2.5",
