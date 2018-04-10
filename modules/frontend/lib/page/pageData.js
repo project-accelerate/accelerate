@@ -26,7 +26,8 @@ export default function pageData({ query }) {
 
         // Get the appropriate Relay environment
         const environment = createEnvironment({
-          backendUrl: BACKEND_URL
+          backendUrl: BACKEND_URL,
+          request: ctx.req
         });
 
         // Provide page query params and any other initial props fetched for

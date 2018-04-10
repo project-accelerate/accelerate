@@ -4,14 +4,18 @@ import { createSchema, createContext } from "accelerate-api";
 import { fetchQuery } from "./fetchQuery";
 
 // Server Relay environment created per-request (not cached)
-export default function initEnvironment({ records = {}, backendUrl } = {}) {
+export default function initEnvironment({
+  records = {},
+  backendUrl,
+  request
+} = {}) {
   return new Environment({
-    network: createNetwork({ backendUrl }),
+    network: createNetwork({ backendUrl, request }),
     store: new Store(new RecordSource(records))
   });
 }
 
-function createNetwork({ backendUrl }) {
+function createNetwork({ backendUrl, request }) {
   // If the backend is running in a different process, resolve queries
   // over the network
   if (backendUrl) {
@@ -21,6 +25,6 @@ function createNetwork({ backendUrl }) {
   // Otherwise, resolve queries within this process
   return LocalLink.create({
     schema: createSchema(),
-    contextValue: createContext()
+    contextValue: createContext(request)
   });
 }
