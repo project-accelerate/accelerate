@@ -1,12 +1,16 @@
 {
   "name": "accelerate-project",
   "version": "0.0.0",
+  "workspaces": [
+    "modules/*"
+  ],
   "engines": {
     "nodejs": "^8.0.0",
     "yarn": "^1.3.2"
   },
   "private": true,
   "scripts": {
+    "build": "wsrun build --stages --exclude-missing",
     "db:init-dev": "yarn db:revert && yarn db:migrate && yarn db:seed",
     "db:migrate": "knex-migrate up",
     "db:seed": "knex seed:run",
@@ -15,9 +19,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "pretty": "prettier --ignore-path .gitignore --write --tab-width 2 \"**/*.js\"",
-    "postinstall": "node scripts/bootstrap",
+    "heroku-postinstall": "yarn build",
     "precommit": "lint-staged && yarn test",
-    "test": "node scripts/test"
+    "test": "node scripts/test",
+    "e2e": "yarn db:init-dev && node scripts/e2e"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
@@ -55,7 +60,8 @@
     "pg": "^7.4.1",
     "recompose": "^0.26.0",
     "relay-compiler": "^1.4.1",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "wsrun": "^3.0.0"
   },
   "lint-staged": {
     "**/*.js": [

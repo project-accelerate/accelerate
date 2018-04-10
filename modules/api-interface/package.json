@@ -1,12 +1,12 @@
 {
-  "name": "accelerate-api-interface",
+  "name": "@accelerate/api-interface",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "build": "../../node_modules/.bin/babel src --out-dir .build"
   },
   "dependencies": {
-    "accelerate-api": "../api",
+    "@accelerate/api": "*",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "relay-local-schema": "^0.6.2",

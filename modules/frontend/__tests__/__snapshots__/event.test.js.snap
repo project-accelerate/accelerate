@@ -2,7 +2,7 @@
 
 exports[`/event should match snapshot 1`] = `
 <div
-  className="MuiPaper-root-4 MuiPaper-elevation2-8 MuiPaper-rounded-5"
+  className="MuiPaper-root-4 MuiPaper-elevation2-8 MuiPaper-rounded-5 event-detail"
 >
   <div
     className="MuiCardContent-root-31"

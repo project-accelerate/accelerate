@@ -1,28 +1,6 @@
 collectors:
-
 - type: js-npm
   path: /
-  actors:
-  # pull requests for all major, minor, and patch updates
-  - type: js-npm
-    versions: "Y.Y.Y"
-
-- type: js-npm
-  path: modules/api-interface
-  actors:
-  # pull requests for all major, minor, and patch updates
-  - type: js-npm
-    versions: "Y.Y.Y"
-
-- type: js-npm
-  path: modules/frontend
-  actors:
-  # pull requests for all major, minor, and patch updates
-  - type: js-npm
-    versions: "Y.Y.Y"
-
-- type: js-npm
-  path: modules/api
   actors:
   # pull requests for all major, minor, and patch updates
   - type: js-npm

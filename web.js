@@ -3,16 +3,18 @@ require("babel-polyfill");
 
 const express = require("express");
 const geoip = require("geoip-lite");
+const { EventEmitter } = require("events");
 const { createBackend } = require("./modules/api");
-const { frontend, render } = require("./modules/frontend");
+const { createFrontend } = require("./modules/frontend");
 
 const { PORT = 3000 } = process.env;
+const { server, render } = createFrontend({ dev: false });
 
-frontend.prepare().then(() => {
-  const server = express();
-  server.enable("trust proxy");
+server.prepare().then(() => {
+  const app = express();
+  app.enable("trust proxy");
 
-  server.use((req, res, next) => {
+  app.use((req, res, next) => {
     try {
       const geo = geoip.lookup(req.ip);
 
@@ -27,12 +29,16 @@ frontend.prepare().then(() => {
     next();
   });
 
-  server.get("/", (req, res) => {
+  app.get("/", (req, res) => {
     res.redirect("/feed", 301);
   });
 
-  server.use(createBackend());
-  server.get("*", render);
+  app.use(createBackend());
+  app.get("*", render);
 
-  server.listen(PORT);
+  const appServer = app.listen(PORT, () => {
+    module.exports.emit("started", appServer);
+  });
 });
+
+module.exports = new EventEmitter();

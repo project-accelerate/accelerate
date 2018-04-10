@@ -22,7 +22,7 @@ const styles = theme => ({
 
 function EventPage({ event, classes }) {
   return (
-    <Card>
+    <Card className="event-detail">
       <CardContent>
         <Typography
           className={classes.heading}

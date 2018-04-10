@@ -3,7 +3,7 @@ import { fetchQuery } from "react-relay";
 import { wrapDisplayName } from "recompose";
 import PropTypes from "prop-types";
 import RelayContextProvider from "relay-context-provider";
-import createEnvironment from "accelerate-api-interface";
+import createEnvironment from "@accelerate/api-interface";
 import { BACKEND_URL } from "../config";
 
 /**
@@ -26,7 +26,8 @@ export default function pageData({ query }) {
 
         // Get the appropriate Relay environment
         const environment = createEnvironment({
-          backendUrl: BACKEND_URL
+          backendUrl: BACKEND_URL,
+          request: ctx.req
         });
 
         // Provide page query params and any other initial props fetched for

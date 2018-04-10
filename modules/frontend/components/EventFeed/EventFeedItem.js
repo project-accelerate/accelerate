@@ -14,7 +14,7 @@ export function EventFeedItemView({ event }) {
   const timings = getTimings(event);
 
   return (
-    <Card style={{ marginBottom: "1rem" }}>
+    <Card className="event-feed-item" style={{ marginBottom: "1rem" }}>
       <CardContent>
         <Typography
           variant="title"
@@ -43,7 +43,9 @@ export function EventFeedItemView({ event }) {
       </CardContent>
       <CardActions>
         <Link href={{ pathname: "/event", query: { id: event.id } }}>
-          <Button dense>See More</Button>
+          <Button className="event-more-info" dense>
+            See More
+          </Button>
         </Link>
       </CardActions>
     </Card>

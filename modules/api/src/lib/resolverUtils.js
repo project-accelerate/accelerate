@@ -7,8 +7,11 @@ import * as fs from "fs";
  * This handles the common case where there is a 1-1 correspondence between
  * the fields defined for a  and those of a model.
  */
-export function resolversForNode(ModelType, { schemaDef } = {}) {
-  const schema = parse(schemaDef || fs.readFileSync("schema.graphql", "utf8"));
+export function resolversForNode(
+  ModelType,
+  { schemaDef = defaultSchema() } = {}
+) {
+  const schema = parse(schemaDef);
   const typeName = ModelType.name;
 
   const schemaType = schema.definitions.find(
@@ -42,4 +45,8 @@ export function resolversForNode(ModelType, { schemaDef } = {}) {
  */
 export function getNode() {
   return (_, { id }) => id;
+}
+
+function defaultSchema() {
+  return fs.readFileSync(require.resolve("../../schema.graphql"), "utf8");
 }
