@@ -20,7 +20,7 @@
     "next": "5",
     "postcode": "^0.2.5",
     "prop-types": "^15.6.1",
-    "react": "^16.2.0",
+    "react": "^16.3.2",
     "react-dom": "^16.2.0",
     "react-jss": "^8.2.1",
     "react-no-ssr": "^1.1.0",
