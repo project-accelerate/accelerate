@@ -49,7 +49,7 @@
     "knex": "^0.14.3",
     "knex-migrate": "^1.5.1",
     "knex-postgis": "^0.5.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.10",
     "markov-generator": "^1.2.2",
     "node-fetch": "^2.0.0",
     "pg": "^7.4.1",
