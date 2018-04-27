@@ -28,7 +28,7 @@
     "recompose": "^0.26.0",
     "relay-context-provider": "^1.0.4",
     "relay-query-lookup-renderer": "^2.0.2",
-    "relay-runtime": "^1.4.1",
+    "relay-runtime": "^1.6.0",
     "serialize-javascript": "^1.4.0"
   },
   "devDependencies": {
