@@ -20,7 +20,7 @@
     "test": "node scripts/test"
   },
   "devDependencies": {
-    "codecov": "^3.0.0",
+    "codecov": "^3.0.1",
     "eslint": "^4.18.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
