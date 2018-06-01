@@ -13,7 +13,7 @@
     "dotenv": "^5.0.1",
     "dotenv-webpack": "^1.5.4",
     "isomorphic-fetch": "^2.2.1",
-    "jss": "^9.5.1",
+    "jss": "^9.8.2",
     "lodash": "^4.17.4",
     "lorem-ipsum": "^1.0.4",
     "material-ui": "^1.0.0-beta.39",
