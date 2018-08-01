@@ -46,7 +46,7 @@
     "express": "^4.16.2",
     "fetch": "^1.1.0",
     "geoip-lite": "^1.2.1",
-    "knex": "^0.14.3",
+    "knex": "^0.15.2",
     "knex-migrate": "^1.5.1",
     "knex-postgis": "^0.5.0",
     "lodash": "^4.17.5",
