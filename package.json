@@ -53,7 +53,7 @@
     "markov-generator": "^1.2.2",
     "node-fetch": "^2.0.0",
     "pg": "^7.4.1",
-    "recompose": "^0.26.0",
+    "recompose": "^0.30.0",
     "relay-compiler": "^1.4.1",
     "uuid": "^3.2.1"
   },
