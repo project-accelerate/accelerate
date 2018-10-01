@@ -2582,9 +2582,9 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-knex-postgis@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/knex-postgis/-/knex-postgis-0.5.0.tgz#763ba72b293954874d54b80df7b5635436e7aecf"
+knex-postgis@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/knex-postgis/-/knex-postgis-0.7.0.tgz#7a719964ea55ff73522c7810f31774c68b3a5223"
   dependencies:
     "@mapbox/geojsonhint" "^2.0.1"
 
