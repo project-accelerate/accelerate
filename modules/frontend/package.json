@@ -15,7 +15,7 @@
     "isomorphic-fetch": "^2.2.1",
     "jss": "^9.5.1",
     "lodash": "^4.17.4",
-    "lorem-ipsum": "^1.0.4",
+    "lorem-ipsum": "^1.0.6",
     "material-ui": "^1.0.0-beta.39",
     "next": "5",
     "postcode": "^0.2.5",
