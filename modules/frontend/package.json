@@ -47,7 +47,7 @@
     "mock-express-response": "^0.2.2",
     "react-test-renderer": "^16.2.0",
     "relay-compiler": "^1.4.1",
-    "relay-mock-network-layer": "^1.2.0"
+    "relay-mock-network-layer": "^2.0.0"
   },
   "scripts": {
     "build": "node scripts/build",

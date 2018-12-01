@@ -714,10 +714,6 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/graphql@^0.9.0":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.9.4.tgz#cdeb6bcbef9b6c584374b81aa7f48ecf3da404fa"
-
 "@types/jss@^9.3.0":
   version "9.3.3"
   resolved "https://registry.yarnpkg.com/@types/jss/-/jss-9.3.3.tgz#818c6281c1909bfba173ee220fd1236fdeeb708e"
@@ -785,7 +781,7 @@ accelerate-api-interface@../api-interface:
 accelerate-api@../api:
   version "0.0.0"
   dependencies:
-    accelerate-authentication "file:../../../../.cache/yarn/v1/authentication"
+    accelerate-authentication "file:../../../home/app/.cache/yarn/v1/authentication"
     apollo-server-express "^1.3.2"
     body-parser "^1.18.2"
     cookie-parser "^1.4.3"
@@ -969,6 +965,13 @@ apollo-link@^1.2.1:
     "@types/node" "^9.4.6"
     apollo-utilities "^1.0.0"
     zen-observable-ts "^0.8.6"
+
+apollo-link@^1.2.3:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.4.tgz#ab4d21d2e428db848e88b5e8f4adc717b19c954b"
+  dependencies:
+    apollo-utilities "^1.0.0"
+    zen-observable-ts "^0.8.11"
 
 apollo-server-core@^1.3.4:
   version "1.3.4"
@@ -4493,20 +4496,21 @@ graphql-extensions@^0.0.x, graphql-extensions@~0.0.9:
     core-js "^2.5.3"
     source-map-support "^0.5.1"
 
-graphql-tools@^1.2.1:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-1.2.3.tgz#079bf4d157e46c0a0bae9fec117e0eea6e03ba2c"
-  dependencies:
-    deprecated-decorator "^0.1.6"
-    uuid "^3.0.1"
-  optionalDependencies:
-    "@types/graphql" "^0.9.0"
-
 graphql-tools@^2.20.0:
   version "2.23.1"
   resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-2.23.1.tgz#23f43000e2b9dc5a89920fe846fc5f71a320efdb"
   dependencies:
     apollo-link "^1.2.1"
+    apollo-utilities "^1.0.1"
+    deprecated-decorator "^0.1.6"
+    iterall "^1.1.3"
+    uuid "^3.1.0"
+
+graphql-tools@^4.0.2:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-4.0.3.tgz#23b5cb52c519212b1b2e4630a361464396ad264b"
+  dependencies:
+    apollo-link "^1.2.3"
     apollo-utilities "^1.0.1"
     deprecated-decorator "^0.1.6"
     iterall "^1.1.3"
@@ -8283,11 +8287,11 @@ relay-local-schema@^0.6.2:
   dependencies:
     relay-runtime "^1.0.0"
 
-relay-mock-network-layer@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/relay-mock-network-layer/-/relay-mock-network-layer-1.2.0.tgz#bcf30aa2d8c9c840f6c5744d008663c2f57a7819"
+relay-mock-network-layer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/relay-mock-network-layer/-/relay-mock-network-layer-2.0.0.tgz#70cad7c11f76822980196486a42258f68e5c7910"
   dependencies:
-    graphql-tools "^1.2.1"
+    graphql-tools "^4.0.2"
 
 relay-query-lookup-renderer@^2.0.2:
   version "2.0.4"
@@ -9554,7 +9558,7 @@ uuid@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
-uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.2.1:
+uuid@^3.0.0, uuid@^3.1.0, uuid@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
 
@@ -10010,6 +10014,12 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
+zen-observable-ts@^0.8.11:
+  version "0.8.11"
+  resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-0.8.11.tgz#d54a27cd17dc4b4bb6bd008e5c096af7fcb068a9"
+  dependencies:
+    zen-observable "^0.8.0"
+
 zen-observable-ts@^0.8.6:
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-0.8.8.tgz#1a586dc204fa5632a88057f879500e0d2ba06869"
@@ -10019,3 +10029,7 @@ zen-observable-ts@^0.8.6:
 zen-observable@^0.7.0:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.7.1.tgz#f84075c0ee085594d3566e1d6454207f126411b3"
+
+zen-observable@^0.8.0:
+  version "0.8.11"
+  resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.11.tgz#d3415885eeeb42ee5abb9821c95bb518fcd6d199"
