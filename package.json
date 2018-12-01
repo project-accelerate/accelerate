@@ -54,7 +54,7 @@
     "node-fetch": "^2.0.0",
     "pg": "^7.4.1",
     "recompose": "^0.26.0",
-    "relay-compiler": "^1.4.1",
+    "relay-compiler": "^1.7.0",
     "uuid": "^3.2.1"
   },
   "lint-staged": {
