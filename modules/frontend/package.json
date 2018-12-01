@@ -24,7 +24,7 @@
     "react-dom": "^16.2.0",
     "react-jss": "^8.2.1",
     "react-no-ssr": "^1.1.0",
-    "react-relay": "^1.4.1",
+    "react-relay": "^1.7.0",
     "recompose": "^0.26.0",
     "relay-context-provider": "^1.0.4",
     "relay-query-lookup-renderer": "^2.0.2",
