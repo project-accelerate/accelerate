@@ -22,7 +22,7 @@
     "graphql-tools": "^2.20.0",
     "invariant": "^2.2.3",
     "isomorphic-fetch": "^2.2.1",
-    "knex": "^0.14.2",
+    "knex": "^0.16.3",
     "knex-postgis": "^0.5.0",
     "lodash": "^4.17.5",
     "node-fetch": "^2.0.0",
